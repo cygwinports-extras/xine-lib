@@ -10,13 +10,12 @@ This package provides the xine library and media plugins.
 
 Runtime requirements:
   cygwin-1.5.24-2
-  arts-1.5.6-1
-  gdk-pixbuf2-2.10.9-1
-  glib2-2.12.9-1
-  gnome-vfs2-2.16.2-1
+  gdk-pixbuf2-2.10.12-1
+  glib2-2.12.12-1
+  gnome-vfs2-2.16.3-1
   libFLAC7-1.1.2-1
-  libGL1-6.5.1-1
-  libGLU1-6.5.1-1
+  libGL1-6.5.3-1
+  libGLU1-6.5.3-1
   libMagick10-6.3.0.1-2
   libSDL12-1.2.11-1
   libX11_6-1.1.1-1
@@ -26,10 +25,9 @@ Runtime requirements:
   libavcodec51-20070413-1
   libcaca0-0.99.11-1
   libcdio7-0.78.2-1
-  libdts0-0.0.2-1
+  libdca0-0.0.5-1
   libdvdcss2-1.2.9-2
   libdvdnav4-0.1.10-1
-  libesound0-0.2.36-1
   libiconv2-1.11-1
   libintl8-0.15-1
   libmad-0.15.1b-3
@@ -38,7 +36,7 @@ Runtime requirements:
   libogg0-1.1.2-1
   libpostproc51-20070413-1
   libspeex1-1.1.10-1
-  libtheora0-1.0alpha7-1
+  libtheora0-1.0alpha7-2
   libvcdinfo0-0.7.23-1
   libvorbis0-1.1.1-1
   libxcb1-1.0-2
@@ -68,34 +66,34 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack xine-lib-1.1.6-X-src.tar.bz2
+  unpack xine-lib-1.1.7-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./xine-lib-1.1.6-X.cygport all
+  cygport ./xine-lib-1.1.7-X.cygport all
 
 This will create:
-  /usr/src/xine-lib-1.1.6-X-src.tar.bz2
-  /usr/src/xine-lib-1.1.6-X.tar.bz2
-  /usr/src/libxine-devel-1.1.6-X.tar.bz2
-  /usr/src/libxine1-1.1.6-X.tar.bz2
+  /usr/src/xine-lib-1.1.7-X-src.tar.bz2
+  /usr/src/xine-lib-1.1.7-X.tar.bz2
+  /usr/src/libxine-devel-1.1.7-X.tar.bz2
+  /usr/src/libxine1-1.1.7-X.tar.bz2
 
 -------------------------------------------
 
 Files included in the binary packages:
 
 (xine-lib)
-  /usr/share/doc/Cygwin/xine-lib-1.1.6.README
-  /usr/share/doc/xine-lib-1.1.6/ABOUT-NLS
-  /usr/share/doc/xine-lib-1.1.6/AUTHORS
-  /usr/share/doc/xine-lib-1.1.6/COPYING
-  /usr/share/doc/xine-lib-1.1.6/COPYING.LIB
-  /usr/share/doc/xine-lib-1.1.6/CREDITS
-  /usr/share/doc/xine-lib-1.1.6/ChangeLog
-  /usr/share/doc/xine-lib-1.1.6/INSTALL
-  /usr/share/doc/xine-lib-1.1.6/NEWS
-  /usr/share/doc/xine-lib-1.1.6/README
-  /usr/share/doc/xine-lib-1.1.6/TODO
+  /usr/share/doc/Cygwin/xine-lib-1.1.7.README
+  /usr/share/doc/xine-lib-1.1.7/ABOUT-NLS
+  /usr/share/doc/xine-lib-1.1.7/AUTHORS
+  /usr/share/doc/xine-lib-1.1.7/COPYING
+  /usr/share/doc/xine-lib-1.1.7/COPYING.LIB
+  /usr/share/doc/xine-lib-1.1.7/CREDITS
+  /usr/share/doc/xine-lib-1.1.7/ChangeLog
+  /usr/share/doc/xine-lib-1.1.7/INSTALL
+  /usr/share/doc/xine-lib-1.1.7/NEWS
+  /usr/share/doc/xine-lib-1.1.7/README
+  /usr/share/doc/xine-lib-1.1.7/TODO
   /usr/share/doc/xine-lib/README
   /usr/share/doc/xine-lib/README.MINGWCROSS
   /usr/share/doc/xine-lib/README.WIN32
@@ -119,90 +117,89 @@ Files included in the binary packages:
 
 (libxine1)
   /usr/bin/cygxine-1.dll
-  /usr/lib/xine/plugins/1.1.6/mime.types
-  /usr/lib/xine/plugins/1.1.6/post/xineplug_post_audio_filters.dll
-  /usr/lib/xine/plugins/1.1.6/post/xineplug_post_goom.dll
-  /usr/lib/xine/plugins/1.1.6/post/xineplug_post_mosaico.dll
-  /usr/lib/xine/plugins/1.1.6/post/xineplug_post_planar.dll
-  /usr/lib/xine/plugins/1.1.6/post/xineplug_post_switch.dll
-  /usr/lib/xine/plugins/1.1.6/post/xineplug_post_tvtime.dll
-  /usr/lib/xine/plugins/1.1.6/post/xineplug_post_visualizations.dll
-  /usr/lib/xine/plugins/1.1.6/xineplug_ao_out_arts.dll
-  /usr/lib/xine/plugins/1.1.6/xineplug_ao_out_esd.dll
-  /usr/lib/xine/plugins/1.1.6/xineplug_ao_out_file.dll
-  /usr/lib/xine/plugins/1.1.6/xineplug_ao_out_none.dll
-  /usr/lib/xine/plugins/1.1.6/xineplug_ao_out_oss.dll
-  /usr/lib/xine/plugins/1.1.6/xineplug_decode_a52.dll
-  /usr/lib/xine/plugins/1.1.6/xineplug_decode_bitplane.dll
-  /usr/lib/xine/plugins/1.1.6/xineplug_decode_dts.dll
-  /usr/lib/xine/plugins/1.1.6/xineplug_decode_dvaudio.dll
-  /usr/lib/xine/plugins/1.1.6/xineplug_decode_faad.dll
-  /usr/lib/xine/plugins/1.1.6/xineplug_decode_ff.dll
-  /usr/lib/xine/plugins/1.1.6/xineplug_decode_gdk_pixbuf.dll
-  /usr/lib/xine/plugins/1.1.6/xineplug_decode_gsm610.dll
-  /usr/lib/xine/plugins/1.1.6/xineplug_decode_image.dll
-  /usr/lib/xine/plugins/1.1.6/xineplug_decode_lpcm.dll
-  /usr/lib/xine/plugins/1.1.6/xineplug_decode_mad.dll
-  /usr/lib/xine/plugins/1.1.6/xineplug_decode_mpc.dll
-  /usr/lib/xine/plugins/1.1.6/xineplug_decode_mpeg2.dll
-  /usr/lib/xine/plugins/1.1.6/xineplug_decode_nsf.dll
-  /usr/lib/xine/plugins/1.1.6/xineplug_decode_real.dll
-  /usr/lib/xine/plugins/1.1.6/xineplug_decode_rgb.dll
-  /usr/lib/xine/plugins/1.1.6/xineplug_decode_speex.dll
-  /usr/lib/xine/plugins/1.1.6/xineplug_decode_spu.dll
-  /usr/lib/xine/plugins/1.1.6/xineplug_decode_spucc.dll
-  /usr/lib/xine/plugins/1.1.6/xineplug_decode_spucmml.dll
-  /usr/lib/xine/plugins/1.1.6/xineplug_decode_spudvb.dll
-  /usr/lib/xine/plugins/1.1.6/xineplug_decode_sputext.dll
-  /usr/lib/xine/plugins/1.1.6/xineplug_decode_theora.dll
-  /usr/lib/xine/plugins/1.1.6/xineplug_decode_vorbis.dll
-  /usr/lib/xine/plugins/1.1.6/xineplug_decode_yuv.dll
-  /usr/lib/xine/plugins/1.1.6/xineplug_dmx_asf.dll
-  /usr/lib/xine/plugins/1.1.6/xineplug_dmx_audio.dll
-  /usr/lib/xine/plugins/1.1.6/xineplug_dmx_avi.dll
-  /usr/lib/xine/plugins/1.1.6/xineplug_dmx_fli.dll
-  /usr/lib/xine/plugins/1.1.6/xineplug_dmx_flv.dll
-  /usr/lib/xine/plugins/1.1.6/xineplug_dmx_games.dll
-  /usr/lib/xine/plugins/1.1.6/xineplug_dmx_iff.dll
-  /usr/lib/xine/plugins/1.1.6/xineplug_dmx_image.dll
-  /usr/lib/xine/plugins/1.1.6/xineplug_dmx_matroska.dll
-  /usr/lib/xine/plugins/1.1.6/xineplug_dmx_mng.dll
-  /usr/lib/xine/plugins/1.1.6/xineplug_dmx_mpeg.dll
-  /usr/lib/xine/plugins/1.1.6/xineplug_dmx_mpeg_block.dll
-  /usr/lib/xine/plugins/1.1.6/xineplug_dmx_mpeg_elem.dll
-  /usr/lib/xine/plugins/1.1.6/xineplug_dmx_mpeg_pes.dll
-  /usr/lib/xine/plugins/1.1.6/xineplug_dmx_mpeg_ts.dll
-  /usr/lib/xine/plugins/1.1.6/xineplug_dmx_nsv.dll
-  /usr/lib/xine/plugins/1.1.6/xineplug_dmx_ogg.dll
-  /usr/lib/xine/plugins/1.1.6/xineplug_dmx_pva.dll
-  /usr/lib/xine/plugins/1.1.6/xineplug_dmx_qt.dll
-  /usr/lib/xine/plugins/1.1.6/xineplug_dmx_rawdv.dll
-  /usr/lib/xine/plugins/1.1.6/xineplug_dmx_real.dll
-  /usr/lib/xine/plugins/1.1.6/xineplug_dmx_slave.dll
-  /usr/lib/xine/plugins/1.1.6/xineplug_dmx_sputext.dll
-  /usr/lib/xine/plugins/1.1.6/xineplug_dmx_yuv4mpeg2.dll
-  /usr/lib/xine/plugins/1.1.6/xineplug_dmx_yuv_frames.dll
-  /usr/lib/xine/plugins/1.1.6/xineplug_inp_cdda.dll
-  /usr/lib/xine/plugins/1.1.6/xineplug_inp_dvb.dll
-  /usr/lib/xine/plugins/1.1.6/xineplug_inp_dvd.dll
-  /usr/lib/xine/plugins/1.1.6/xineplug_inp_file.dll
-  /usr/lib/xine/plugins/1.1.6/xineplug_inp_gnome_vfs.dll
-  /usr/lib/xine/plugins/1.1.6/xineplug_inp_http.dll
-  /usr/lib/xine/plugins/1.1.6/xineplug_inp_mms.dll
-  /usr/lib/xine/plugins/1.1.6/xineplug_inp_net.dll
-  /usr/lib/xine/plugins/1.1.6/xineplug_inp_pnm.dll
-  /usr/lib/xine/plugins/1.1.6/xineplug_inp_rtp.dll
-  /usr/lib/xine/plugins/1.1.6/xineplug_inp_rtsp.dll
-  /usr/lib/xine/plugins/1.1.6/xineplug_inp_stdin_fifo.dll
-  /usr/lib/xine/plugins/1.1.6/xineplug_inp_vcd.dll
-  /usr/lib/xine/plugins/1.1.6/xineplug_vo_out_aa.dll
-  /usr/lib/xine/plugins/1.1.6/xineplug_vo_out_caca.dll
-  /usr/lib/xine/plugins/1.1.6/xineplug_vo_out_none.dll
-  /usr/lib/xine/plugins/1.1.6/xineplug_vo_out_opengl.dll
-  /usr/lib/xine/plugins/1.1.6/xineplug_vo_out_sdl.dll
-  /usr/lib/xine/plugins/1.1.6/xineplug_vo_out_xcbshm.dll
-  /usr/lib/xine/plugins/1.1.6/xineplug_vo_out_xshm.dll
-  /usr/lib/xine/plugins/1.1.6/xineplug_wavpack.dll
+  /usr/lib/xine/plugins/1.1.7/mime.types
+  /usr/lib/xine/plugins/1.1.7/post/xineplug_post_audio_filters.dll
+  /usr/lib/xine/plugins/1.1.7/post/xineplug_post_goom.dll
+  /usr/lib/xine/plugins/1.1.7/post/xineplug_post_mosaico.dll
+  /usr/lib/xine/plugins/1.1.7/post/xineplug_post_planar.dll
+  /usr/lib/xine/plugins/1.1.7/post/xineplug_post_switch.dll
+  /usr/lib/xine/plugins/1.1.7/post/xineplug_post_tvtime.dll
+  /usr/lib/xine/plugins/1.1.7/post/xineplug_post_visualizations.dll
+  /usr/lib/xine/plugins/1.1.7/xineplug_ao_out_esd.dll
+  /usr/lib/xine/plugins/1.1.7/xineplug_ao_out_file.dll
+  /usr/lib/xine/plugins/1.1.7/xineplug_ao_out_none.dll
+  /usr/lib/xine/plugins/1.1.7/xineplug_ao_out_oss.dll
+  /usr/lib/xine/plugins/1.1.7/xineplug_decode_a52.dll
+  /usr/lib/xine/plugins/1.1.7/xineplug_decode_bitplane.dll
+  /usr/lib/xine/plugins/1.1.7/xineplug_decode_dts.dll
+  /usr/lib/xine/plugins/1.1.7/xineplug_decode_dvaudio.dll
+  /usr/lib/xine/plugins/1.1.7/xineplug_decode_faad.dll
+  /usr/lib/xine/plugins/1.1.7/xineplug_decode_ff.dll
+  /usr/lib/xine/plugins/1.1.7/xineplug_decode_gdk_pixbuf.dll
+  /usr/lib/xine/plugins/1.1.7/xineplug_decode_gsm610.dll
+  /usr/lib/xine/plugins/1.1.7/xineplug_decode_image.dll
+  /usr/lib/xine/plugins/1.1.7/xineplug_decode_lpcm.dll
+  /usr/lib/xine/plugins/1.1.7/xineplug_decode_mad.dll
+  /usr/lib/xine/plugins/1.1.7/xineplug_decode_mpc.dll
+  /usr/lib/xine/plugins/1.1.7/xineplug_decode_mpeg2.dll
+  /usr/lib/xine/plugins/1.1.7/xineplug_decode_nsf.dll
+  /usr/lib/xine/plugins/1.1.7/xineplug_decode_real.dll
+  /usr/lib/xine/plugins/1.1.7/xineplug_decode_rgb.dll
+  /usr/lib/xine/plugins/1.1.7/xineplug_decode_speex.dll
+  /usr/lib/xine/plugins/1.1.7/xineplug_decode_spu.dll
+  /usr/lib/xine/plugins/1.1.7/xineplug_decode_spucc.dll
+  /usr/lib/xine/plugins/1.1.7/xineplug_decode_spucmml.dll
+  /usr/lib/xine/plugins/1.1.7/xineplug_decode_spudvb.dll
+  /usr/lib/xine/plugins/1.1.7/xineplug_decode_sputext.dll
+  /usr/lib/xine/plugins/1.1.7/xineplug_decode_theora.dll
+  /usr/lib/xine/plugins/1.1.7/xineplug_decode_vorbis.dll
+  /usr/lib/xine/plugins/1.1.7/xineplug_decode_yuv.dll
+  /usr/lib/xine/plugins/1.1.7/xineplug_dmx_asf.dll
+  /usr/lib/xine/plugins/1.1.7/xineplug_dmx_audio.dll
+  /usr/lib/xine/plugins/1.1.7/xineplug_dmx_avi.dll
+  /usr/lib/xine/plugins/1.1.7/xineplug_dmx_fli.dll
+  /usr/lib/xine/plugins/1.1.7/xineplug_dmx_flv.dll
+  /usr/lib/xine/plugins/1.1.7/xineplug_dmx_games.dll
+  /usr/lib/xine/plugins/1.1.7/xineplug_dmx_iff.dll
+  /usr/lib/xine/plugins/1.1.7/xineplug_dmx_image.dll
+  /usr/lib/xine/plugins/1.1.7/xineplug_dmx_matroska.dll
+  /usr/lib/xine/plugins/1.1.7/xineplug_dmx_mng.dll
+  /usr/lib/xine/plugins/1.1.7/xineplug_dmx_mpeg.dll
+  /usr/lib/xine/plugins/1.1.7/xineplug_dmx_mpeg_block.dll
+  /usr/lib/xine/plugins/1.1.7/xineplug_dmx_mpeg_elem.dll
+  /usr/lib/xine/plugins/1.1.7/xineplug_dmx_mpeg_pes.dll
+  /usr/lib/xine/plugins/1.1.7/xineplug_dmx_mpeg_ts.dll
+  /usr/lib/xine/plugins/1.1.7/xineplug_dmx_nsv.dll
+  /usr/lib/xine/plugins/1.1.7/xineplug_dmx_ogg.dll
+  /usr/lib/xine/plugins/1.1.7/xineplug_dmx_pva.dll
+  /usr/lib/xine/plugins/1.1.7/xineplug_dmx_qt.dll
+  /usr/lib/xine/plugins/1.1.7/xineplug_dmx_rawdv.dll
+  /usr/lib/xine/plugins/1.1.7/xineplug_dmx_real.dll
+  /usr/lib/xine/plugins/1.1.7/xineplug_dmx_slave.dll
+  /usr/lib/xine/plugins/1.1.7/xineplug_dmx_sputext.dll
+  /usr/lib/xine/plugins/1.1.7/xineplug_dmx_yuv4mpeg2.dll
+  /usr/lib/xine/plugins/1.1.7/xineplug_dmx_yuv_frames.dll
+  /usr/lib/xine/plugins/1.1.7/xineplug_inp_cdda.dll
+  /usr/lib/xine/plugins/1.1.7/xineplug_inp_dvb.dll
+  /usr/lib/xine/plugins/1.1.7/xineplug_inp_dvd.dll
+  /usr/lib/xine/plugins/1.1.7/xineplug_inp_file.dll
+  /usr/lib/xine/plugins/1.1.7/xineplug_inp_gnome_vfs.dll
+  /usr/lib/xine/plugins/1.1.7/xineplug_inp_http.dll
+  /usr/lib/xine/plugins/1.1.7/xineplug_inp_mms.dll
+  /usr/lib/xine/plugins/1.1.7/xineplug_inp_net.dll
+  /usr/lib/xine/plugins/1.1.7/xineplug_inp_pnm.dll
+  /usr/lib/xine/plugins/1.1.7/xineplug_inp_rtp.dll
+  /usr/lib/xine/plugins/1.1.7/xineplug_inp_rtsp.dll
+  /usr/lib/xine/plugins/1.1.7/xineplug_inp_stdin_fifo.dll
+  /usr/lib/xine/plugins/1.1.7/xineplug_inp_vcd.dll
+  /usr/lib/xine/plugins/1.1.7/xineplug_vo_out_aa.dll
+  /usr/lib/xine/plugins/1.1.7/xineplug_vo_out_caca.dll
+  /usr/lib/xine/plugins/1.1.7/xineplug_vo_out_none.dll
+  /usr/lib/xine/plugins/1.1.7/xineplug_vo_out_opengl.dll
+  /usr/lib/xine/plugins/1.1.7/xineplug_vo_out_sdl.dll
+  /usr/lib/xine/plugins/1.1.7/xineplug_vo_out_xcbshm.dll
+  /usr/lib/xine/plugins/1.1.7/xineplug_vo_out_xshm.dll
+  /usr/lib/xine/plugins/1.1.7/xineplug_wavpack.dll
   /usr/share/locale/cs/LC_MESSAGES/libxine1.mo
   /usr/share/locale/de/LC_MESSAGES/libxine1.mo
   /usr/share/locale/es/LC_MESSAGES/libxine1.mo
@@ -298,6 +295,10 @@ Files included in the binary packages:
 ------------------
 
 Port Notes:
+
+----- version 1.1.7-1 -----
+Version bump.
+arts plugin disabled upstream.
 
 ----- version 1.1.6-1 -----
 Version bump.
