@@ -1,5 +1,5 @@
 category: Audio Video
-requires: cygwin xine-lib libfreetype26 libiconv2 libintl8 glib2 gdk-pixbuf2 gnome-vfs2 libFLAC7 libGL1 libGLU1 libSDL12 libX11_6 libXext6 liba52_0 libaa1 libcaca0 libcdio7 libdca0 libdvdcss2 libdvdnav4 libmad libmng1 libmpcdec3 libogg0 libspeex1 libtheora0 libvcdinfo0 libvorbis0 libwavpack0 libavcodec51 libpostproc51 libxcb1
+requires: cygwin xine-lib libfreetype26 libiconv2 libintl8 glib2 gdk-pixbuf2 gnome-vfs2 libFLAC7 libGL1 libGLU1 libSDL12 libX11_6 libXext6 liba52_0 libaa1 libcaca0 libcdio7 libdca0 libdvdcss2 libdvdnav4 libmad libmng1 libmpcdec5 libogg0 libspeex1 libtheora0 libvcdinfo0 libvorbis0 libwavpack0 libavcodec51 libpostproc51 libxcb1
 external-source: xine-lib
 sdesc: "Xine multimedia library (runtime)"
 ldesc: "xine is a free multimedia player. It plays back CDs, DVDs, and
