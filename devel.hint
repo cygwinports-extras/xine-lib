@@ -1,5 +1,6 @@
 category: Audio Video
-requires: cygwin libfreetype2-devel libiconv gettext
+requires: cygwin libfontconfig-devel libfreetype2-devel libiconv gettext zlib
+external-source: xine-lib
 sdesc: "Xine multimedia library (development)"
 ldesc: "xine is a free multimedia player. It plays back CDs, DVDs, and
 VCDs. It also decodes multimedia files like AVI, MOV, WMV, and MP3 from

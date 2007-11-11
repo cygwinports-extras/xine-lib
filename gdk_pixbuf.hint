@@ -1,7 +1,7 @@
 category: Audio Video
-requires: cygwin xine-lib libfontconfig1 libfreetype26 libiconv2 libintl8 libmodplug0 libpostproc51 zlib
+requires: cygwin libxine1 glib2 gdk-pixbuf2
 external-source: xine-lib
-sdesc: "Xine multimedia library (runtime)"
+sdesc: "Xine multimedia library (GdkPixbuf plugin)"
 ldesc: "xine is a free multimedia player. It plays back CDs, DVDs, and
 VCDs. It also decodes multimedia files like AVI, MOV, WMV, and MP3 from
 local disk drives, and displays multimedia streamed over the Internet.
