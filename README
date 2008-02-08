@@ -73,57 +73,57 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack xine-lib-1.1.10-X-src.tar.bz2
+  unpack xine-lib-1.1.10.1-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./xine-lib-1.1.10-X.cygport all
+  cygport ./xine-lib-1.1.10.1-X.cygport all
 
 This will create:
-  /usr/src/xine-lib-1.1.10-X-src.tar.bz2
-  /usr/src/xine-lib-1.1.10-X.tar.bz2
-  /usr/src/libxine-devel-1.1.10-X.tar.bz2
-  /usr/src/libxine1-1.1.10-X.tar.bz2
+  /usr/src/xine-lib-1.1.10.1-X-src.tar.bz2
+  /usr/src/xine-lib-1.1.10.1-X.tar.bz2
+  /usr/src/libxine-devel-1.1.10.1-X.tar.bz2
+  /usr/src/libxine1-1.1.10.1-X.tar.bz2
 
-  /usr/src/libxine1-a52-1.1.10-X.tar.bz2
-  /usr/src/libxine1-aa-1.1.10-X.tar.bz2
-  /usr/src/libxine1-arts-1.1.10-X.tar.bz2
-  /usr/src/libxine1-caca-1.1.10-X.tar.bz2
-  /usr/src/libxine1-dts-1.1.10-X.tar.bz2
-  /usr/src/libxine1-dvd-1.1.10-X.tar.bz2
-  /usr/src/libxine1-esd-1.1.10-X.tar.bz2
-  /usr/src/libxine1-ffmpeg-1.1.10-X.tar.bz2
-  /usr/src/libxine1-flac-1.1.10-X.tar.bz2
-  /usr/src/libxine1-gdk_pixbuf-1.1.10-X.tar.bz2
-  /usr/src/libxine1-gnome_vfs-1.1.10-X.tar.bz2
-  /usr/src/libxine1-image-1.1.10-X.tar.bz2
-  /usr/src/libxine1-mad-1.1.10-X.tar.bz2
-  /usr/src/libxine1-mng-1.1.10-X.tar.bz2
-  /usr/src/libxine1-musepack-1.1.10-X.tar.bz2
-  /usr/src/libxine1-ogg-1.1.10-X.tar.bz2
-  /usr/src/libxine1-opengl-1.1.10-X.tar.bz2
-  /usr/src/libxine1-sdl-1.1.10-X.tar.bz2
-  /usr/src/libxine1-vcd-1.1.10-X.tar.bz2
-  /usr/src/libxine1-wavpack-1.1.10-X.tar.bz2
-  /usr/src/libxine1-x11-1.1.10-X.tar.bz2
-  /usr/src/libxine1-xcb-1.1.10-X.tar.bz2
+  /usr/src/libxine1-a52-1.1.10.1-X.tar.bz2
+  /usr/src/libxine1-aa-1.1.10.1-X.tar.bz2
+  /usr/src/libxine1-arts-1.1.10.1-X.tar.bz2
+  /usr/src/libxine1-caca-1.1.10.1-X.tar.bz2
+  /usr/src/libxine1-dts-1.1.10.1-X.tar.bz2
+  /usr/src/libxine1-dvd-1.1.10.1-X.tar.bz2
+  /usr/src/libxine1-esd-1.1.10.1-X.tar.bz2
+  /usr/src/libxine1-ffmpeg-1.1.10.1-X.tar.bz2
+  /usr/src/libxine1-flac-1.1.10.1-X.tar.bz2
+  /usr/src/libxine1-gdk_pixbuf-1.1.10.1-X.tar.bz2
+  /usr/src/libxine1-gnome_vfs-1.1.10.1-X.tar.bz2
+  /usr/src/libxine1-image-1.1.10.1-X.tar.bz2
+  /usr/src/libxine1-mad-1.1.10.1-X.tar.bz2
+  /usr/src/libxine1-mng-1.1.10.1-X.tar.bz2
+  /usr/src/libxine1-musepack-1.1.10.1-X.tar.bz2
+  /usr/src/libxine1-ogg-1.1.10.1-X.tar.bz2
+  /usr/src/libxine1-opengl-1.1.10.1-X.tar.bz2
+  /usr/src/libxine1-sdl-1.1.10.1-X.tar.bz2
+  /usr/src/libxine1-vcd-1.1.10.1-X.tar.bz2
+  /usr/src/libxine1-wavpack-1.1.10.1-X.tar.bz2
+  /usr/src/libxine1-x11-1.1.10.1-X.tar.bz2
+  /usr/src/libxine1-xcb-1.1.10.1-X.tar.bz2
 
 -------------------------------------------
 
 Files included in the binary packages:
 
 (xine-lib)
-  /usr/share/doc/Cygwin/xine-lib-1.1.10.README
-  /usr/share/doc/xine-lib-1.1.10/ABOUT-NLS
-  /usr/share/doc/xine-lib-1.1.10/AUTHORS
-  /usr/share/doc/xine-lib-1.1.10/COPYING
-  /usr/share/doc/xine-lib-1.1.10/COPYING.LIB
-  /usr/share/doc/xine-lib-1.1.10/CREDITS
-  /usr/share/doc/xine-lib-1.1.10/ChangeLog
-  /usr/share/doc/xine-lib-1.1.10/INSTALL
-  /usr/share/doc/xine-lib-1.1.10/NEWS
-  /usr/share/doc/xine-lib-1.1.10/README
-  /usr/share/doc/xine-lib-1.1.10/TODO
+  /usr/share/doc/Cygwin/xine-lib-1.1.10.1.README
+  /usr/share/doc/xine-lib-1.1.10.1/ABOUT-NLS
+  /usr/share/doc/xine-lib-1.1.10.1/AUTHORS
+  /usr/share/doc/xine-lib-1.1.10.1/COPYING
+  /usr/share/doc/xine-lib-1.1.10.1/COPYING.LIB
+  /usr/share/doc/xine-lib-1.1.10.1/CREDITS
+  /usr/share/doc/xine-lib-1.1.10.1/ChangeLog
+  /usr/share/doc/xine-lib-1.1.10.1/INSTALL
+  /usr/share/doc/xine-lib-1.1.10.1/NEWS
+  /usr/share/doc/xine-lib-1.1.10.1/README
+  /usr/share/doc/xine-lib-1.1.10.1/TODO
   /usr/share/doc/xine-lib/README
   /usr/share/doc/xine-lib/README.MINGWCROSS
   /usr/share/doc/xine-lib/README.WIN32
@@ -368,6 +368,9 @@ Files included in the binary packages:
 ------------------
 
 Port Notes:
+
+----- version 1.1.10.1-1 -----
+Security fix for CVE-2008-0486.
 
 ----- version 1.1.10-1 -----
 Version bump.
