@@ -10,20 +10,20 @@ This package provides the xine library and media plugins.
 
 Runtime requirements:
   cygwin-1.5.25-11
-  libfontconfig1-2.3.2-2
+  libfontconfig1-2.6.0-1
   libfreetype26-2.3.5-1
   libiconv2-1.11-1
   libintl8-0.15-1
   libmodplug0-0.8.4-2
-  libpostproc51-10755-1
+  libpostproc51-13270-1
   zlib-1.2.3-2
 
 Additional plugin requirements:
   arts-1.5.9-1
   esound-0.2.38-1
   gdk-pixbuf2-2.12.9-1
-  glib2-2.14.6-1
-  gnome-vfs2-2.20.1-1
+  glib2-2.16.4-1
+  gnome-vfs2-2.22.0-1
   libFLAC8-1.2.1-1
   libGL1-7.0.3-1
   libGLU1-7.0.3-1
@@ -33,7 +33,7 @@ Additional plugin requirements:
   libXext6-1.0.3-1
   liba52_0-0.7.4-3
   libaa1-1.4rc5-1
-  libavcodec51-10755-1
+  libavcodec51-13270-1
   libcaca0-0.99.13-1
   libcdio7-0.80-2
   libdca0-0.0.5-2
@@ -44,7 +44,7 @@ Additional plugin requirements:
   libmpcdec5-1.2.6-1
   libogg0-1.1.3-1
   libspeex1-1.2beta2-1
-  libtheora0-1.0beta2-2
+  libtheora0-1.0beta3-1
   libvcdinfo0-0.7.23-2
   libvorbis0-1.2.0-1
   libwavpack1-4.41.0-1
@@ -55,7 +55,7 @@ Build requirements:
   autoconf2.5-2.61-1
   automake1.10-1.10.1-1
   binutils-20060817-1
-  cygport-0.3.9-1
+  cygport-0.3.11-1
   gawk-3.1.6-1
   gcc-core-3.4.4-3
   gcc-g++-3.4.4-3
@@ -73,57 +73,56 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack xine-lib-1.1.12-X-src.tar.bz2
+  unpack xine-lib-1.1.13-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./xine-lib-1.1.12-X.cygport all
+  cygport ./xine-lib-1.1.13-X.cygport all
 
 This will create:
-  /usr/src/xine-lib-1.1.12-X-src.tar.bz2
-  /usr/src/xine-lib-1.1.12-X.tar.bz2
-  /usr/src/libxine-devel-1.1.12-X.tar.bz2
-  /usr/src/libxine1-1.1.12-X.tar.bz2
+  /usr/src/xine-lib-1.1.13-X-src.tar.bz2
+  /usr/src/xine-lib-1.1.13-X.tar.bz2
+  /usr/src/libxine-devel-1.1.13-X.tar.bz2
+  /usr/src/libxine1-1.1.13-X.tar.bz2
 
-  /usr/src/libxine1-a52-1.1.12-X.tar.bz2
-  /usr/src/libxine1-aa-1.1.12-X.tar.bz2
-  /usr/src/libxine1-arts-1.1.12-X.tar.bz2
-  /usr/src/libxine1-caca-1.1.12-X.tar.bz2
-  /usr/src/libxine1-dts-1.1.12-X.tar.bz2
-  /usr/src/libxine1-dvd-1.1.12-X.tar.bz2
-  /usr/src/libxine1-esd-1.1.12-X.tar.bz2
-  /usr/src/libxine1-ffmpeg-1.1.12-X.tar.bz2
-  /usr/src/libxine1-flac-1.1.12-X.tar.bz2
-  /usr/src/libxine1-gdk_pixbuf-1.1.12-X.tar.bz2
-  /usr/src/libxine1-gnome_vfs-1.1.12-X.tar.bz2
-  /usr/src/libxine1-image-1.1.12-X.tar.bz2
-  /usr/src/libxine1-mad-1.1.12-X.tar.bz2
-  /usr/src/libxine1-mng-1.1.12-X.tar.bz2
-  /usr/src/libxine1-musepack-1.1.12-X.tar.bz2
-  /usr/src/libxine1-ogg-1.1.12-X.tar.bz2
-  /usr/src/libxine1-opengl-1.1.12-X.tar.bz2
-  /usr/src/libxine1-sdl-1.1.12-X.tar.bz2
-  /usr/src/libxine1-vcd-1.1.12-X.tar.bz2
-  /usr/src/libxine1-wavpack-1.1.12-X.tar.bz2
-  /usr/src/libxine1-x11-1.1.12-X.tar.bz2
-  /usr/src/libxine1-xcb-1.1.12-X.tar.bz2
+  /usr/src/libxine1-a52-1.1.13-X.tar.bz2
+  /usr/src/libxine1-aa-1.1.13-X.tar.bz2
+  /usr/src/libxine1-arts-1.1.13-X.tar.bz2
+  /usr/src/libxine1-caca-1.1.13-X.tar.bz2
+  /usr/src/libxine1-dts-1.1.13-X.tar.bz2
+  /usr/src/libxine1-dvd-1.1.13-X.tar.bz2
+  /usr/src/libxine1-esd-1.1.13-X.tar.bz2
+  /usr/src/libxine1-ffmpeg-1.1.13-X.tar.bz2
+  /usr/src/libxine1-flac-1.1.13-X.tar.bz2
+  /usr/src/libxine1-gdk_pixbuf-1.1.13-X.tar.bz2
+  /usr/src/libxine1-gnome_vfs-1.1.13-X.tar.bz2
+  /usr/src/libxine1-image-1.1.13-X.tar.bz2
+  /usr/src/libxine1-mad-1.1.13-X.tar.bz2
+  /usr/src/libxine1-mng-1.1.13-X.tar.bz2
+  /usr/src/libxine1-musepack-1.1.13-X.tar.bz2
+  /usr/src/libxine1-ogg-1.1.13-X.tar.bz2
+  /usr/src/libxine1-opengl-1.1.13-X.tar.bz2
+  /usr/src/libxine1-sdl-1.1.13-X.tar.bz2
+  /usr/src/libxine1-vcd-1.1.13-X.tar.bz2
+  /usr/src/libxine1-wavpack-1.1.13-X.tar.bz2
+  /usr/src/libxine1-x11-1.1.13-X.tar.bz2
+  /usr/src/libxine1-xcb-1.1.13-X.tar.bz2
 
 -------------------------------------------
 
 Files included in the binary packages:
 
 (xine-lib)
-  /usr/share/doc/Cygwin/xine-lib-1.1.12.README
-  /usr/share/doc/xine-lib-1.1.12/ABOUT-NLS
-  /usr/share/doc/xine-lib-1.1.12/AUTHORS
-  /usr/share/doc/xine-lib-1.1.12/COPYING
-  /usr/share/doc/xine-lib-1.1.12/COPYING.LIB
-  /usr/share/doc/xine-lib-1.1.12/CREDITS
-  /usr/share/doc/xine-lib-1.1.12/ChangeLog
-  /usr/share/doc/xine-lib-1.1.12/INSTALL
-  /usr/share/doc/xine-lib-1.1.12/NEWS
-  /usr/share/doc/xine-lib-1.1.12/README
-  /usr/share/doc/xine-lib-1.1.12/TODO
+  /usr/share/doc/xine-lib-1.1.13/ABOUT-NLS
+  /usr/share/doc/xine-lib-1.1.13/AUTHORS
+  /usr/share/doc/xine-lib-1.1.13/COPYING
+  /usr/share/doc/xine-lib-1.1.13/COPYING.LIB
+  /usr/share/doc/xine-lib-1.1.13/CREDITS
+  /usr/share/doc/xine-lib-1.1.13/ChangeLog
+  /usr/share/doc/xine-lib-1.1.13/INSTALL
+  /usr/share/doc/xine-lib-1.1.13/NEWS
+  /usr/share/doc/xine-lib-1.1.13/README
+  /usr/share/doc/xine-lib-1.1.13/TODO
   /usr/share/doc/xine-lib/README
   /usr/share/doc/xine-lib/README.MINGWCROSS
   /usr/share/doc/xine-lib/README.WIN32
@@ -148,65 +147,65 @@ Files included in the binary packages:
 (libxine1)
   /usr/bin/cygxine-1.dll
   /usr/bin/xine-list-1.1.exe
-  /usr/lib/xine/plugins/1.21/mime.types
-  /usr/lib/xine/plugins/1.21/post/xineplug_post_audio_filters.dll
-  /usr/lib/xine/plugins/1.21/post/xineplug_post_goom.dll
-  /usr/lib/xine/plugins/1.21/post/xineplug_post_mosaico.dll
-  /usr/lib/xine/plugins/1.21/post/xineplug_post_planar.dll
-  /usr/lib/xine/plugins/1.21/post/xineplug_post_switch.dll
-  /usr/lib/xine/plugins/1.21/post/xineplug_post_tvtime.dll
-  /usr/lib/xine/plugins/1.21/post/xineplug_post_visualizations.dll
-  /usr/lib/xine/plugins/1.21/xineplug_ao_out_file.dll
-  /usr/lib/xine/plugins/1.21/xineplug_ao_out_none.dll
-  /usr/lib/xine/plugins/1.21/xineplug_ao_out_oss.dll
-  /usr/lib/xine/plugins/1.21/xineplug_decode_bitplane.dll
-  /usr/lib/xine/plugins/1.21/xineplug_decode_dvaudio.dll
-  /usr/lib/xine/plugins/1.21/xineplug_decode_faad.dll
-  /usr/lib/xine/plugins/1.21/xineplug_decode_gsm610.dll
-  /usr/lib/xine/plugins/1.21/xineplug_decode_lpcm.dll
-  /usr/lib/xine/plugins/1.21/xineplug_decode_mpeg2.dll
-  /usr/lib/xine/plugins/1.21/xineplug_decode_nsf.dll
-  /usr/lib/xine/plugins/1.21/xineplug_decode_real.dll
-  /usr/lib/xine/plugins/1.21/xineplug_decode_rgb.dll
-  /usr/lib/xine/plugins/1.21/xineplug_decode_spucc.dll
-  /usr/lib/xine/plugins/1.21/xineplug_decode_spucmml.dll
-  /usr/lib/xine/plugins/1.21/xineplug_decode_spudvb.dll
-  /usr/lib/xine/plugins/1.21/xineplug_decode_sputext.dll
-  /usr/lib/xine/plugins/1.21/xineplug_decode_yuv.dll
-  /usr/lib/xine/plugins/1.21/xineplug_dmx_asf.dll
-  /usr/lib/xine/plugins/1.21/xineplug_dmx_audio.dll
-  /usr/lib/xine/plugins/1.21/xineplug_dmx_avi.dll
-  /usr/lib/xine/plugins/1.21/xineplug_dmx_fli.dll
-  /usr/lib/xine/plugins/1.21/xineplug_dmx_flv.dll
-  /usr/lib/xine/plugins/1.21/xineplug_dmx_games.dll
-  /usr/lib/xine/plugins/1.21/xineplug_dmx_iff.dll
-  /usr/lib/xine/plugins/1.21/xineplug_dmx_image.dll
-  /usr/lib/xine/plugins/1.21/xineplug_dmx_matroska.dll
-  /usr/lib/xine/plugins/1.21/xineplug_dmx_mpeg.dll
-  /usr/lib/xine/plugins/1.21/xineplug_dmx_mpeg_block.dll
-  /usr/lib/xine/plugins/1.21/xineplug_dmx_mpeg_elem.dll
-  /usr/lib/xine/plugins/1.21/xineplug_dmx_mpeg_pes.dll
-  /usr/lib/xine/plugins/1.21/xineplug_dmx_mpeg_ts.dll
-  /usr/lib/xine/plugins/1.21/xineplug_dmx_nsv.dll
-  /usr/lib/xine/plugins/1.21/xineplug_dmx_pva.dll
-  /usr/lib/xine/plugins/1.21/xineplug_dmx_qt.dll
-  /usr/lib/xine/plugins/1.21/xineplug_dmx_rawdv.dll
-  /usr/lib/xine/plugins/1.21/xineplug_dmx_real.dll
-  /usr/lib/xine/plugins/1.21/xineplug_dmx_slave.dll
-  /usr/lib/xine/plugins/1.21/xineplug_dmx_sputext.dll
-  /usr/lib/xine/plugins/1.21/xineplug_dmx_yuv4mpeg2.dll
-  /usr/lib/xine/plugins/1.21/xineplug_dmx_yuv_frames.dll
-  /usr/lib/xine/plugins/1.21/xineplug_inp_cdda.dll
-  /usr/lib/xine/plugins/1.21/xineplug_inp_dvb.dll
-  /usr/lib/xine/plugins/1.21/xineplug_inp_file.dll
-  /usr/lib/xine/plugins/1.21/xineplug_inp_http.dll
-  /usr/lib/xine/plugins/1.21/xineplug_inp_mms.dll
-  /usr/lib/xine/plugins/1.21/xineplug_inp_net.dll
-  /usr/lib/xine/plugins/1.21/xineplug_inp_pnm.dll
-  /usr/lib/xine/plugins/1.21/xineplug_inp_rtp.dll
-  /usr/lib/xine/plugins/1.21/xineplug_inp_rtsp.dll
-  /usr/lib/xine/plugins/1.21/xineplug_inp_stdin_fifo.dll
-  /usr/lib/xine/plugins/1.21/xineplug_vo_out_none.dll
+  /usr/lib/xine/plugins/1.22/mime.types
+  /usr/lib/xine/plugins/1.22/post/xineplug_post_audio_filters.dll
+  /usr/lib/xine/plugins/1.22/post/xineplug_post_goom.dll
+  /usr/lib/xine/plugins/1.22/post/xineplug_post_mosaico.dll
+  /usr/lib/xine/plugins/1.22/post/xineplug_post_planar.dll
+  /usr/lib/xine/plugins/1.22/post/xineplug_post_switch.dll
+  /usr/lib/xine/plugins/1.22/post/xineplug_post_tvtime.dll
+  /usr/lib/xine/plugins/1.22/post/xineplug_post_visualizations.dll
+  /usr/lib/xine/plugins/1.22/xineplug_ao_out_file.dll
+  /usr/lib/xine/plugins/1.22/xineplug_ao_out_none.dll
+  /usr/lib/xine/plugins/1.22/xineplug_ao_out_oss.dll
+  /usr/lib/xine/plugins/1.22/xineplug_decode_bitplane.dll
+  /usr/lib/xine/plugins/1.22/xineplug_decode_dvaudio.dll
+  /usr/lib/xine/plugins/1.22/xineplug_decode_faad.dll
+  /usr/lib/xine/plugins/1.22/xineplug_decode_gsm610.dll
+  /usr/lib/xine/plugins/1.22/xineplug_decode_lpcm.dll
+  /usr/lib/xine/plugins/1.22/xineplug_decode_mpeg2.dll
+  /usr/lib/xine/plugins/1.22/xineplug_decode_nsf.dll
+  /usr/lib/xine/plugins/1.22/xineplug_decode_real.dll
+  /usr/lib/xine/plugins/1.22/xineplug_decode_rgb.dll
+  /usr/lib/xine/plugins/1.22/xineplug_decode_spucc.dll
+  /usr/lib/xine/plugins/1.22/xineplug_decode_spucmml.dll
+  /usr/lib/xine/plugins/1.22/xineplug_decode_spudvb.dll
+  /usr/lib/xine/plugins/1.22/xineplug_decode_sputext.dll
+  /usr/lib/xine/plugins/1.22/xineplug_decode_yuv.dll
+  /usr/lib/xine/plugins/1.22/xineplug_dmx_asf.dll
+  /usr/lib/xine/plugins/1.22/xineplug_dmx_audio.dll
+  /usr/lib/xine/plugins/1.22/xineplug_dmx_avi.dll
+  /usr/lib/xine/plugins/1.22/xineplug_dmx_fli.dll
+  /usr/lib/xine/plugins/1.22/xineplug_dmx_flv.dll
+  /usr/lib/xine/plugins/1.22/xineplug_dmx_games.dll
+  /usr/lib/xine/plugins/1.22/xineplug_dmx_iff.dll
+  /usr/lib/xine/plugins/1.22/xineplug_dmx_image.dll
+  /usr/lib/xine/plugins/1.22/xineplug_dmx_matroska.dll
+  /usr/lib/xine/plugins/1.22/xineplug_dmx_mpeg.dll
+  /usr/lib/xine/plugins/1.22/xineplug_dmx_mpeg_block.dll
+  /usr/lib/xine/plugins/1.22/xineplug_dmx_mpeg_elem.dll
+  /usr/lib/xine/plugins/1.22/xineplug_dmx_mpeg_pes.dll
+  /usr/lib/xine/plugins/1.22/xineplug_dmx_mpeg_ts.dll
+  /usr/lib/xine/plugins/1.22/xineplug_dmx_nsv.dll
+  /usr/lib/xine/plugins/1.22/xineplug_dmx_pva.dll
+  /usr/lib/xine/plugins/1.22/xineplug_dmx_qt.dll
+  /usr/lib/xine/plugins/1.22/xineplug_dmx_rawdv.dll
+  /usr/lib/xine/plugins/1.22/xineplug_dmx_real.dll
+  /usr/lib/xine/plugins/1.22/xineplug_dmx_slave.dll
+  /usr/lib/xine/plugins/1.22/xineplug_dmx_sputext.dll
+  /usr/lib/xine/plugins/1.22/xineplug_dmx_yuv4mpeg2.dll
+  /usr/lib/xine/plugins/1.22/xineplug_dmx_yuv_frames.dll
+  /usr/lib/xine/plugins/1.22/xineplug_inp_cdda.dll
+  /usr/lib/xine/plugins/1.22/xineplug_inp_dvb.dll
+  /usr/lib/xine/plugins/1.22/xineplug_inp_file.dll
+  /usr/lib/xine/plugins/1.22/xineplug_inp_http.dll
+  /usr/lib/xine/plugins/1.22/xineplug_inp_mms.dll
+  /usr/lib/xine/plugins/1.22/xineplug_inp_net.dll
+  /usr/lib/xine/plugins/1.22/xineplug_inp_pnm.dll
+  /usr/lib/xine/plugins/1.22/xineplug_inp_rtp.dll
+  /usr/lib/xine/plugins/1.22/xineplug_inp_rtsp.dll
+  /usr/lib/xine/plugins/1.22/xineplug_inp_stdin_fifo.dll
+  /usr/lib/xine/plugins/1.22/xineplug_vo_out_none.dll
   /usr/share/locale/cs/LC_MESSAGES/libxine1.mo
   /usr/share/locale/de/LC_MESSAGES/libxine1.mo
   /usr/share/locale/es/LC_MESSAGES/libxine1.mo
@@ -254,71 +253,71 @@ Files included in the binary packages:
   /usr/share/xine/libxine1/fonts/serif-64.xinefont.gz
 
 (libxine1-a52)
-  /usr/lib/xine/plugins/1.21/xineplug_decode_a52.dll
+  /usr/lib/xine/plugins/1.22/xineplug_decode_a52.dll
 
 (libxine1-aa)
-  /usr/lib/xine/plugins/1.21/xineplug_vo_out_aa.dll
+  /usr/lib/xine/plugins/1.22/xineplug_vo_out_aa.dll
 
 (libxine1-arts)
-  /usr/lib/xine/plugins/1.21/xineplug_ao_out_arts.dll
+  /usr/lib/xine/plugins/1.22/xineplug_ao_out_arts.dll
 
 (libxine1-caca)
-  /usr/lib/xine/plugins/1.21/xineplug_vo_out_caca.dll
+  /usr/lib/xine/plugins/1.22/xineplug_vo_out_caca.dll
 
 (libxine1-dts)
-  /usr/lib/xine/plugins/1.21/xineplug_decode_dts.dll
+  /usr/lib/xine/plugins/1.22/xineplug_decode_dts.dll
 
 (libxine1-dvd)
-  /usr/lib/xine/plugins/1.21/xineplug_inp_dvd.dll
-  /usr/lib/xine/plugins/1.21/xineplug_decode_spu.dll
+  /usr/lib/xine/plugins/1.22/xineplug_inp_dvd.dll
+  /usr/lib/xine/plugins/1.22/xineplug_decode_spu.dll
 
 (libxine1-esound)
-  /usr/lib/xine/plugins/1.21/xineplug_ao_out_esd.dll
+  /usr/lib/xine/plugins/1.22/xineplug_ao_out_esd.dll
 
 (libxine1-ffmpeg)
-  /usr/lib/xine/plugins/1.21/xineplug_decode_ff.dll
+  /usr/lib/xine/plugins/1.22/xineplug_decode_ff.dll
 
 (libxine1-gdk_pixbuf)
-  /usr/lib/xine/plugins/1.21/xineplug_decode_gdk_pixbuf.dll
+  /usr/lib/xine/plugins/1.22/xineplug_decode_gdk_pixbuf.dll
 
 (libxine1-gnome_vfs)
-  /usr/lib/xine/plugins/1.21/xineplug_inp_gnome_vfs.dll
+  /usr/lib/xine/plugins/1.22/xineplug_inp_gnome_vfs.dll
 
 (libxine1-image)
-  /usr/lib/xine/plugins/1.21/xineplug_decode_image.dll
+  /usr/lib/xine/plugins/1.22/xineplug_decode_image.dll
 
 (libxine1-mad)
-  /usr/lib/xine/plugins/1.21/xineplug_decode_mad.dll
+  /usr/lib/xine/plugins/1.22/xineplug_decode_mad.dll
 
 (libxine1-musepack)
-  /usr/lib/xine/plugins/1.21/xineplug_decode_mpc.dll
+  /usr/lib/xine/plugins/1.22/xineplug_decode_mpc.dll
 
 (libxine1-mng)
-  /usr/lib/xine/plugins/1.21/xineplug_dmx_mng.dll
+  /usr/lib/xine/plugins/1.22/xineplug_dmx_mng.dll
 
 (libxine1-ogg)
-  /usr/lib/xine/plugins/1.21/xineplug_decode_speex.dll
-  /usr/lib/xine/plugins/1.21/xineplug_decode_theora.dll
-  /usr/lib/xine/plugins/1.21/xineplug_decode_vorbis.dll
-  /usr/lib/xine/plugins/1.21/xineplug_dmx_ogg.dll
+  /usr/lib/xine/plugins/1.22/xineplug_decode_speex.dll
+  /usr/lib/xine/plugins/1.22/xineplug_decode_theora.dll
+  /usr/lib/xine/plugins/1.22/xineplug_decode_vorbis.dll
+  /usr/lib/xine/plugins/1.22/xineplug_dmx_ogg.dll
 
 (libxine1-opengl)
-  /usr/lib/xine/plugins/1.21/xineplug_vo_out_opengl.dll
+  /usr/lib/xine/plugins/1.22/xineplug_vo_out_opengl.dll
 
 (libxine1-sdl)
-  /usr/lib/xine/plugins/1.21/xineplug_vo_out_sdl.dll
+  /usr/lib/xine/plugins/1.22/xineplug_vo_out_sdl.dll
 
 (libxine1-vcd)
-  /usr/lib/xine/plugins/1.21/xineplug_inp_vcd.dll
+  /usr/lib/xine/plugins/1.22/xineplug_inp_vcd.dll
 
 (libxine1-wavpack)
-  /usr/lib/xine/plugins/1.21/xineplug_wavpack.dll
+  /usr/lib/xine/plugins/1.22/xineplug_wavpack.dll
 
 (libxine1-x11)
-  /usr/lib/xine/plugins/1.21/xineplug_vo_out_xshm.dll
+  /usr/lib/xine/plugins/1.22/xineplug_vo_out_xshm.dll
 
 (libxine1-xcb)
-  /usr/lib/xine/plugins/1.21/xineplug_vo_out_xcbshm.dll
+  /usr/lib/xine/plugins/1.22/xineplug_vo_out_xcbshm.dll
 
 (libxine-devel)
   /usr/bin/xine-config
@@ -369,6 +368,9 @@ Files included in the binary packages:
 ------------------
 
 Port Notes:
+
+----- version 1.1.13-1 -----
+Version bump.
 
 ----- version 1.1.12-1 -----
 Version bump.
