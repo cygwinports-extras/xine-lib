@@ -1,0 +1,138 @@
+DESCRIPTION="Xine multimedia engine"
+HOMEPAGE="http://xinehq.de/"
+SRC_URI="mirror://sourceforge/xine/${P}.tar.bz2"
+
+abi=1
+age=$((PVP[2] + 9))
+PKG_NAMES="${PN} libxine${abi} libxine-devel"
+PKG_HINTS="setup runtime devel"
+PKG_CONTENTS[0]='usr/share/doc/ usr/share/man/man5/'
+PKG_CONTENTS[2]="usr/bin/xine-config usr/include/ usr/lib/lib*
+                 usr/lib/pkgconfig/ usr/share/aclocal/ usr/share/man/man1/"
+
+pdir="usr/lib/xine/plugins/${abi}.${age}"
+
+n=2
+for mod in a52 aa arts caca dvd dts esd ffmpeg flac gdk_pixbuf gnome_vfs \
+           image mad mng musepack ogg opengl sdl vcd wavpack x11 xcb
+do
+	PKG_NAMES+=" libxine${abi}-${mod}"
+	PKG_HINTS+=" ${mod}"
+
+	case ${mod} in
+		ffmpeg)		dll=ff ;;
+		image)		dll=decode_image ;;
+		musepack)	dll=mpc ;;
+		x11)		dll=xshm ;;
+		xcb)		dll=xcbshm ;;
+		*)			dll=${mod} ;;
+	esac
+
+	PKG_CONTENTS[$((++n))]="${pdir}/*_${dll}.dll"
+	PKG_CONTENTS[1]+=" --exclude=xineplug*_${dll}.dll"
+
+	case ${mod} in
+		dvd)
+			PKG_CONTENTS[${n}]+=" ${pdir}/*_spu.dll"
+			PKG_CONTENTS[1]+=" --exclude=xineplug*_spu.dll"
+			;;
+		ogg)
+			for ogg in speex theora vorbis
+			do
+				PKG_CONTENTS[${n}]+=" ${pdir}/*_${ogg}.dll"
+				PKG_CONTENTS[1]+=" --exclude=xineplug*_${ogg}.dll"
+			done
+			;;
+	esac
+done
+unset dll mod n ogg
+
+PKG_CONTENTS[1]+=" usr/bin/cygxine-${abi}.dll
+                   usr/bin/xine-list-${PV_MAJ_MIN}.exe
+                   ${pdir} usr/share/locale/ usr/share/xine/"
+
+DIFF_EXCLUDES+=" configure.h configure.h.in m4 po xine.h xine-config build_rpms.sh"
+
+CYGCONF_ARGS="
+  ac_cv_header_ffmpeg_avutil_h=no
+  --disable-altivec
+  --disable-dependency-tracking
+  --disable-ipv6
+  --enable-mmap
+  --disable-rpath
+  --disable-static
+  PTHREAD_CFLAGS=  PTHREAD_LIBS=-lpthread
+
+  --enable-aalib
+  --with-caca
+  --with-freetype --enable-antialiasing
+  --with-fontconfig
+  --enable-opengl
+  --enable-glu
+  --with-sdl
+  --with-x
+  --with-xcb
+  --disable-dha-kmod
+  --disable-directfb
+  --disable-dxr3
+  --disable-fb
+  --without-libstk
+  --disable-macosx-video
+  --disable-syncfb
+  --disable-v4l
+  --disable-vidix
+  --disable-xinerama
+  --disable-xv
+  --disable-xvmc
+
+  --with-arts
+  --with-esound
+  --enable-oss
+  --without-alsa
+  --disable-coreaudio
+  --without-fusionsound
+  --without-jack
+  --without-pulseaudio
+
+  --enable-a52dec --with-external-a52dec
+  --enable-asf
+  --enable-dts --with-external-libdts
+  --with-external-dvdnav
+  --enable-faad
+  --with-external-ffmpeg
+  --enable-gdkpixbuf
+  --enable-gnomevfs
+  --with-imagemagick
+  --with-libFLAC --with-libflac --disable-libFLACtest
+  --enable-mad --with-external-libmad
+  --enable-modplug
+  --enable-musepack --with-external-libmpcdec
+  --enable-mng
+  --enable-real-codecs --with-real-codecs-path=/usr/lib/win32
+  --with-speex
+  --with-theora
+  --enable-vcd --without-internal-vcdlibs
+  --with-vorbis
+  --with-wavpack
+  --disable-samba
+  --disable-w32dll
+"
+
+src_install() {
+	cd ${B}
+	cyginstall
+
+	find ${D}/usr/lib/xine -name '*.dll.a' -exec rm -f '{}' +
+
+	# Assure that no plugins were accidentally built static
+	err=0
+	for a in $(find ${D}/usr/lib/xine -name '*.a')
+	do
+		let err++
+	done
+
+	if (( err > 0 ))
+	then
+		error "${err} module(s) were not built shared."
+	fi
+}
