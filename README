@@ -21,47 +21,48 @@ Runtime requirements:
 Additional plugin requirements:
   arts-1.5.9-1
   esound-0.2.38-1
-  gdk-pixbuf2-2.12.10-1
+  gdk-pixbuf2-2.12.11-1
   glib2-2.16.4-1
   gnome-vfs2-2.22.0-1
-  libFLAC8-1.2.1-1
-  libGL1-7.0.3-1
-  libGLU1-7.0.3-1
-  libMagick1-6.4.0.6-1
-  libSDL12-1.2.13-1
-  libX11_6-1.1.3-1
-  libXext6-1.0.3-1
   liba52_0-0.7.4-3
   libaa1-1.4rc5-1
   libavcodec51-13777-1
-  libcaca0-0.99.13-1
+  libcaca0-0.99.14-1
   libcdio7-0.80-2
   libdca0-0.0.5-2
   libdvdcss2-1.2.9-2
   libdvdnav4-0.1.10-1
+  libfaad0-2.6.1-2
+  libFLAC8-1.2.1-1
+  libGL1-7.0.3-1
+  libGLU1-7.0.3-1
   libmad0-0.15.1b-4
+  libMagick1-6.4.0.6-1
   libmng1-1.0.10-1
   libmpcdec5-1.2.6-1
   libogg0-1.1.3-1
+  libSDL12-1.2.13-1
   libspeex1-1.2beta3.2-1
   libtheora0-1.0beta3-1
   libvcdinfo0-0.7.23-2
   libvorbis0-1.2.0-1
   libwavpack1-4.41.0-1
+  libX11_6-1.1.3-1
   libxcb1-1.1-1
+  libXext6-1.0.3-1
 
 Build requirements:
 (besides corresponding -devel packages)
   autoconf2.5-2.61-1
   automake1.10-1.10.1-1
-  binutils-20060817-1
+  binutils-20080524-2
   cygport-0.3.12-1
   gawk-3.1.6-1
   gcc-core-3.4.4-3
   gcc-g++-3.4.4-3
   libtool-2.2.2-2
   make-3.81-1
-  pkg-config-0.21-1
+  pkg-config-0.23a-2
   sed-4.1.5-2
 
 Canonical website:
@@ -73,76 +74,45 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack xine-lib-1.1.14-X-src.tar.bz2
+  unpack xine-lib-1.1.15-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./xine-lib-1.1.14-X.cygport all
+  cygport ./xine-lib-1.1.15-X.cygport all
 
 This will create:
-  /usr/src/xine-lib-1.1.14-X-src.tar.bz2
-  /usr/src/xine-lib-1.1.14-X.tar.bz2
-  /usr/src/libxine-devel-1.1.14-X.tar.bz2
-  /usr/src/libxine1-1.1.14-X.tar.bz2
+  /usr/src/xine-lib-1.1.15-X-src.tar.bz2
+  /usr/src/xine-lib-1.1.15-X.tar.bz2
+  /usr/src/libxine-devel-1.1.15-X.tar.bz2
+  /usr/src/libxine1-1.1.15-X.tar.bz2
 
-  /usr/src/libxine1-a52-1.1.14-X.tar.bz2
-  /usr/src/libxine1-aa-1.1.14-X.tar.bz2
-  /usr/src/libxine1-arts-1.1.14-X.tar.bz2
-  /usr/src/libxine1-caca-1.1.14-X.tar.bz2
-  /usr/src/libxine1-dts-1.1.14-X.tar.bz2
-  /usr/src/libxine1-dvd-1.1.14-X.tar.bz2
-  /usr/src/libxine1-esd-1.1.14-X.tar.bz2
-  /usr/src/libxine1-ffmpeg-1.1.14-X.tar.bz2
-  /usr/src/libxine1-flac-1.1.14-X.tar.bz2
-  /usr/src/libxine1-gdk_pixbuf-1.1.14-X.tar.bz2
-  /usr/src/libxine1-gnome_vfs-1.1.14-X.tar.bz2
-  /usr/src/libxine1-image-1.1.14-X.tar.bz2
-  /usr/src/libxine1-mad-1.1.14-X.tar.bz2
-  /usr/src/libxine1-mng-1.1.14-X.tar.bz2
-  /usr/src/libxine1-musepack-1.1.14-X.tar.bz2
-  /usr/src/libxine1-ogg-1.1.14-X.tar.bz2
-  /usr/src/libxine1-opengl-1.1.14-X.tar.bz2
-  /usr/src/libxine1-sdl-1.1.14-X.tar.bz2
-  /usr/src/libxine1-vcd-1.1.14-X.tar.bz2
-  /usr/src/libxine1-wavpack-1.1.14-X.tar.bz2
-  /usr/src/libxine1-x11-1.1.14-X.tar.bz2
-  /usr/src/libxine1-xcb-1.1.14-X.tar.bz2
+  /usr/src/libxine1-a52-1.1.15-X.tar.bz2
+  /usr/src/libxine1-aa-1.1.15-X.tar.bz2
+  /usr/src/libxine1-arts-1.1.15-X.tar.bz2
+  /usr/src/libxine1-caca-1.1.15-X.tar.bz2
+  /usr/src/libxine1-dts-1.1.15-X.tar.bz2
+  /usr/src/libxine1-dvd-1.1.15-X.tar.bz2
+  /usr/src/libxine1-esd-1.1.15-X.tar.bz2
+  /usr/src/libxine1-faad-1.1.15-X.tar.bz2
+  /usr/src/libxine1-ffmpeg-1.1.15-X.tar.bz2
+  /usr/src/libxine1-flac-1.1.15-X.tar.bz2
+  /usr/src/libxine1-gdk_pixbuf-1.1.15-X.tar.bz2
+  /usr/src/libxine1-gnome_vfs-1.1.15-X.tar.bz2
+  /usr/src/libxine1-image-1.1.15-X.tar.bz2
+  /usr/src/libxine1-mad-1.1.15-X.tar.bz2
+  /usr/src/libxine1-mng-1.1.15-X.tar.bz2
+  /usr/src/libxine1-musepack-1.1.15-X.tar.bz2
+  /usr/src/libxine1-ogg-1.1.15-X.tar.bz2
+  /usr/src/libxine1-opengl-1.1.15-X.tar.bz2
+  /usr/src/libxine1-sdl-1.1.15-X.tar.bz2
+  /usr/src/libxine1-vcd-1.1.15-X.tar.bz2
+  /usr/src/libxine1-wavpack-1.1.15-X.tar.bz2
+  /usr/src/libxine1-x11-1.1.15-X.tar.bz2
+  /usr/src/libxine1-xcb-1.1.15-X.tar.bz2
 
 -------------------------------------------
 
 Files included in the binary packages:
-
-(xine-lib)
-  /usr/share/doc/xine-lib-1.1.14/ABOUT-NLS
-  /usr/share/doc/xine-lib-1.1.14/AUTHORS
-  /usr/share/doc/xine-lib-1.1.14/COPYING
-  /usr/share/doc/xine-lib-1.1.14/COPYING.LIB
-  /usr/share/doc/xine-lib-1.1.14/CREDITS
-  /usr/share/doc/xine-lib-1.1.14/ChangeLog
-  /usr/share/doc/xine-lib-1.1.14/INSTALL
-  /usr/share/doc/xine-lib-1.1.14/NEWS
-  /usr/share/doc/xine-lib-1.1.14/README
-  /usr/share/doc/xine-lib-1.1.14/TODO
-  /usr/share/doc/xine-lib/README
-  /usr/share/doc/xine-lib/README.MINGWCROSS
-  /usr/share/doc/xine-lib/README.WIN32
-  /usr/share/doc/xine-lib/README.dvb
-  /usr/share/doc/xine-lib/README.dxr3
-  /usr/share/doc/xine-lib/README.freebsd
-  /usr/share/doc/xine-lib/README.irix
-  /usr/share/doc/xine-lib/README.network_dvd
-  /usr/share/doc/xine-lib/README.opengl
-  /usr/share/doc/xine-lib/README.solaris
-  /usr/share/doc/xine-lib/README.syncfb
-  /usr/share/doc/xine-lib/README_xxmc.html
-  /usr/share/doc/xine-lib/faq.html
-  /usr/share/doc/xine-lib/faq.txt
-  /usr/share/doc/xine-lib/hackersguide/architecture.png
-  /usr/share/doc/xine-lib/hackersguide/hackersguide.html
-  /usr/share/doc/xine-lib/hackersguide/library.png
-  /usr/share/doc/xine-lib/hackersguide/overlays.png
-  /usr/share/doc/xine-lib/hackersguide/post_frame.png
-  /usr/share/man/man5/xine.5.gz
 
 (libxine1)
   /usr/bin/cygxine-1.dll
@@ -160,7 +130,6 @@ Files included in the binary packages:
   /usr/lib/xine/plugins/1.23/xineplug_ao_out_oss.dll
   /usr/lib/xine/plugins/1.23/xineplug_decode_bitplane.dll
   /usr/lib/xine/plugins/1.23/xineplug_decode_dvaudio.dll
-  /usr/lib/xine/plugins/1.23/xineplug_decode_faad.dll
   /usr/lib/xine/plugins/1.23/xineplug_decode_gsm610.dll
   /usr/lib/xine/plugins/1.23/xineplug_decode_lpcm.dll
   /usr/lib/xine/plugins/1.23/xineplug_decode_mpeg2.dll
@@ -206,6 +175,34 @@ Files included in the binary packages:
   /usr/lib/xine/plugins/1.23/xineplug_inp_rtsp.dll
   /usr/lib/xine/plugins/1.23/xineplug_inp_stdin_fifo.dll
   /usr/lib/xine/plugins/1.23/xineplug_vo_out_none.dll
+  /usr/share/doc/xine-lib-1.1.15/ABOUT-NLS
+  /usr/share/doc/xine-lib-1.1.15/AUTHORS
+  /usr/share/doc/xine-lib-1.1.15/COPYING
+  /usr/share/doc/xine-lib-1.1.15/COPYING.LIB
+  /usr/share/doc/xine-lib-1.1.15/CREDITS
+  /usr/share/doc/xine-lib-1.1.15/ChangeLog
+  /usr/share/doc/xine-lib-1.1.15/INSTALL
+  /usr/share/doc/xine-lib-1.1.15/NEWS
+  /usr/share/doc/xine-lib-1.1.15/README
+  /usr/share/doc/xine-lib-1.1.15/README.MINGWCROSS
+  /usr/share/doc/xine-lib-1.1.15/README.WIN32
+  /usr/share/doc/xine-lib-1.1.15/README.dvb
+  /usr/share/doc/xine-lib-1.1.15/README.dxr3
+  /usr/share/doc/xine-lib-1.1.15/README.freebsd
+  /usr/share/doc/xine-lib-1.1.15/README.irix
+  /usr/share/doc/xine-lib-1.1.15/README.network_dvd
+  /usr/share/doc/xine-lib-1.1.15/README.opengl
+  /usr/share/doc/xine-lib-1.1.15/README.solaris
+  /usr/share/doc/xine-lib-1.1.15/README.syncfb
+  /usr/share/doc/xine-lib-1.1.15/README_xxmc.html
+  /usr/share/doc/xine-lib-1.1.15/TODO
+  /usr/share/doc/xine-lib-1.1.15/faq.html
+  /usr/share/doc/xine-lib-1.1.15/faq.txt
+  /usr/share/doc/xine-lib-1.1.15/hackersguide/architecture.png
+  /usr/share/doc/xine-lib-1.1.15/hackersguide/hackersguide.html
+  /usr/share/doc/xine-lib-1.1.15/hackersguide/library.png
+  /usr/share/doc/xine-lib-1.1.15/hackersguide/overlays.png
+  /usr/share/doc/xine-lib-1.1.15/hackersguide/post_frame.png
   /usr/share/locale/cs/LC_MESSAGES/libxine1.mo
   /usr/share/locale/de/LC_MESSAGES/libxine1.mo
   /usr/share/locale/es/LC_MESSAGES/libxine1.mo
@@ -215,6 +212,7 @@ Files included in the binary packages:
   /usr/share/locale/pl/LC_MESSAGES/libxine1.mo
   /usr/share/locale/pt_BR/LC_MESSAGES/libxine1.mo
   /usr/share/locale/sk/LC_MESSAGES/libxine1.mo
+  /usr/share/man/man5/xine.5.gz
   /usr/share/xine/libxine1/fonts/cc-16.xinefont.gz
   /usr/share/xine/libxine1/fonts/cc-20.xinefont.gz
   /usr/share/xine/libxine1/fonts/cc-24.xinefont.gz
@@ -273,6 +271,9 @@ Files included in the binary packages:
 
 (libxine1-esound)
   /usr/lib/xine/plugins/1.23/xineplug_ao_out_esd.dll
+
+(libxine1-faad)
+  /usr/lib/xine/plugins/1.23/xineplug_decode_faad.dll
 
 (libxine1-ffmpeg)
   /usr/lib/xine/plugins/1.23/xineplug_decode_ff.dll
@@ -368,6 +369,10 @@ Files included in the binary packages:
 ------------------
 
 Port Notes:
+
+----- version 1.1.15-1 -----
+Version bump.
+New external plugin: faad.
 
 ----- version 1.1.14-1 -----
 Version bump.

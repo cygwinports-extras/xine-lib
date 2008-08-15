@@ -1,0 +1,10 @@
+--- origsrc/xine-lib-1.1.14/misc/libxine.pc.in	2008-05-19 09:15:42.000000000 -0500
++++ src/xine-lib-1.1.14/misc/libxine.pc.in	2008-07-04 14:18:34.531250000 -0500
+@@ -23,6 +23,6 @@
+ Version: @XINE_MAJOR@.@XINE_MINOR@.@XINE_SUB@@XINE_PATCH@
+ Requires:
+ Libs: -L${libdir} -lxine
+-Libs.private: @ZLIB_LIBS@ @NET_LIBS@ @PTHREAD_LIBS@ @LIBICONV@ @RT_LIBS@
++Libs.private: @ZLIB_LIBS@ @NET_LIBS@ @PTHREAD_LIBS@ @LTLIBICONV@ @RT_LIBS@
+ Cflags: -I${includedir}
+ Cflags.private: @PTHREAD_CFLAGS@
