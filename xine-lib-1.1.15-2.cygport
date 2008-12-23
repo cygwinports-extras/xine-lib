@@ -2,6 +2,10 @@ DESCRIPTION="Xine multimedia engine"
 HOMEPAGE="http://xinehq.de/"
 SRC_URI="mirror://sourceforge/xine/${P}.tar.bz2"
 PATCH_URI="
+	mirror://portage/media-libs/${PN}/files/${P}-libmpeg2-vis.patch
+	mirror://portage/media-libs/${PN}/files/${P}-buffer_h_ansi.patch
+	mirror://portage/media-libs/${PN}/files/${P}-ffmpeg.patch
+	mirror://portage/media-libs/${PN}/files/${P}-GetImagePixels.patch
 	1.1.14-cygwin.patch
 	1.1.15-strcasestr.patch
 	1.1.14-xv.patch
@@ -9,21 +13,17 @@ PATCH_URI="
 	1.1.14-libiconv.patch
 "
 
-abi=1
-age=$((PVP[2] + 9))
-PKG_NAMES="${PN} libxine${abi} libxine-devel"
+PKG_NAMES="${PN} libxine1 libxine-devel"
 PKG_HINTS="setup lib devel"
-PKG_CONTENTS[0]=	# empty
-PKG_CONTENTS[2]="usr/bin/xine-config usr/include/ usr/lib/lib*
-                 usr/lib/pkgconfig/ usr/share/aclocal/ usr/share/man/man1/"
+libxine_devel_CONTENTS="usr/bin/xine-* usr/include/ usr/lib/lib*
+                        usr/lib/pkgconfig/ usr/share/aclocal/ usr/share/man/man1/"
 
-pdir="usr/lib/xine/plugins/${abi}.${age}"
+pdir="usr/lib/xine/plugins/1.$((PV[3] + 9))"
 
-n=2
 for mod in a52 aa arts caca dvd dts esd faad ffmpeg flac gdk_pixbuf gnome_vfs \
            image mad mng musepack ogg opengl sdl vcd wavpack x11 xcb
 do
-	PKG_NAMES+=" libxine${abi}-${mod}"
+	PKG_NAMES+=" libxine1-${mod}"
 	PKG_HINTS+=" ${mod}"
 
 	case ${mod} in
@@ -35,33 +35,33 @@ do
 		*)			dll=${mod} ;;
 	esac
 
-	PKG_CONTENTS[$((++n))]="${pdir}/*_${dll}.dll"
-	PKG_CONTENTS[1]+=" --exclude=xineplug*_${dll}.dll"
+	declare libxine1_${mod}_CONTENTS="${pdir}/*_${dll}.dll"
+	libxine1_CONTENTS+=" --exclude=xineplug*_${dll}.dll"
 
 	case ${mod} in
 		dvd)
-			PKG_CONTENTS[${n}]+=" ${pdir}/*_spu.dll"
-			PKG_CONTENTS[1]+=" --exclude=xineplug*_spu.dll"
+			declare libxine1_${mod}_CONTENTS+=" ${pdir}/*_spu.dll"
+			libxine1_CONTENTS+=" --exclude=xineplug*_spu.dll"
 			;;
 		ogg)
 			for ogg in speex theora vorbis
 			do
-				PKG_CONTENTS[${n}]+=" ${pdir}/*_${ogg}.dll"
-				PKG_CONTENTS[1]+=" --exclude=xineplug*_${ogg}.dll"
+				declare libxine1_${mod}_CONTENTS+=" ${pdir}/*_${ogg}.dll"
+				libxine1_CONTENTS+=" --exclude=xineplug*_${ogg}.dll"
 			done
 			;;
 	esac
 done
-unset dll mod n ogg
+unset dll mod ogg
 
-PKG_CONTENTS[1]+=" usr/bin/cygxine-${abi}.dll
-                   usr/bin/xine-list-${PV_MAJ_MIN}.exe
-                   ${pdir} usr/share/doc/ usr/share/locale/
-                   usr/share/man/man5/ usr/share/xine/"
+libxine1_CONTENTS+=" usr/bin/cygxine-1.dll
+                     ${pdir} usr/share/doc/ usr/share/locale/
+                     usr/share/man/man5/ usr/share/xine/"
 
 DIFF_EXCLUDES+=" configure.h configure.h.in m4 po xine.h xine-config build_rpms.sh"
 
 NO_AUTOPOINT=1
+CFLAGS+=" -frename-registers -ffunction-sections"
 CYGCONF_ARGS="
   --disable-altivec
   --disable-dependency-tracking
@@ -99,7 +99,7 @@ CYGCONF_ARGS="
   --without-alsa
   --disable-coreaudio
   --without-fusionsound
-  --without-jack
+  --with-jack
   --without-pulseaudio
 
   --enable-a52dec --with-external-a52dec

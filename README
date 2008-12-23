@@ -12,57 +12,57 @@ Runtime requirements:
   cygwin-1.5.25-15
   libfontconfig1-2.6.0-1
   libfreetype26-2.3.7-1
-  libiconv2-1.11-1
-  libintl8-0.15-1
+  libiconv2-1.12-1
+  libintl8-0.17-2
   libmodplug0-0.8.4-2
   libpostproc51-13777-1
   zlib-1.2.3-2
 
 Additional plugin requirements:
-  arts-1.5.9-1
-  esound-0.2.38-1
-  gdk-pixbuf2-2.12.11-1
-  glib2-2.16.4-1
-  gnome-vfs2-2.22.0-1
+  arts-1.5.10-1
+  esound-0.2.41-1
   liba52_0-0.7.4-3
   libaa1-1.4rc5-1
   libavcodec51-13777-1
-  libcaca0-0.99.14-1
+  libcaca0-0.99.16-1
   libcdio7-0.80-2
   libdca0-0.0.5-2
   libdvdcss2-1.2.9-2
   libdvdnav4-0.1.10-1
   libfaad0-2.6.1-2
   libFLAC8-1.2.1-1
+  libgdk_pixbuf2.0-2.14.6-1
   libGL1-7.0.3-1
+  libglib2.0_0-2.18.3-1
   libGLU1-7.0.3-1
+  libgnomevfs2_0-2.24.0-1
   libmad0-0.15.1b-4
-  libMagick1-6.4.0.6-1
+  libMagick1-6.4.3.8-1
   libmng1-1.0.10-1
   libmpcdec5-1.2.6-1
   libogg0-1.1.3-1
-  libSDL12-1.2.13-1
+  libSDL1.2_0-1.2.13-2
   libspeex1-1.2beta3.2-1
-  libtheora0-1.0beta3-1
+  libtheora0-1.0-1
   libvcdinfo0-0.7.23-2
   libvorbis0-1.2.0-1
-  libwavpack1-4.41.0-1
-  libX11_6-1.1.3-1
+  libwavpack1-4.50.1-1
+  libX11_6-1.1.5-1
   libxcb1-1.1-2
   libxcb-shape0-1.1-2
   libxcb-shm0-1.1-2
-  libXext6-1.0.3-1
+  libXext6-1.0.4-1
 
 Build requirements:
 (besides corresponding -devel packages)
-  autoconf2.5-2.61-1
-  automake1.10-1.10.1-1
-  binutils-20080524-2
-  cygport-0.3.12-1
+  autoconf2.5-2.63-1
+  automake1.10-1.10.1-2
+  binutils-20080624-2
+  cygport-0.4.3-1
   gawk-3.1.6-1
   gcc-core-3.4.4-3
   gcc-g++-3.4.4-3
-  libtool-2.2.2-2
+  libtool-2.2.6a-1
   make-3.81-1
   pkg-config-0.23a-2
   sed-4.1.5-2
@@ -118,7 +118,6 @@ Files included in the binary packages:
 
 (libxine1)
   /usr/bin/cygxine-1.dll
-  /usr/bin/xine-list-1.1.exe
   /usr/lib/xine/plugins/1.23/mime.types
   /usr/lib/xine/plugins/1.23/post/xineplug_post_audio_filters.dll
   /usr/lib/xine/plugins/1.23/post/xineplug_post_goom.dll
@@ -324,6 +323,7 @@ Files included in the binary packages:
 
 (libxine-devel)
   /usr/bin/xine-config
+  /usr/bin/xine-list-1.1.exe
   /usr/include/xine.h
   /usr/include/xine/alphablend.h
   /usr/include/xine/array.h
@@ -371,6 +371,9 @@ Files included in the binary packages:
 ------------------
 
 Port Notes:
+
+----- version 1.1.15-2 -----
+Rebuilt with Gentoo -r2 patches.
 
 ----- version 1.1.15-1 -----
 Version bump.
