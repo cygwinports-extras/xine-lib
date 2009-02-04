@@ -2,15 +2,11 @@ DESCRIPTION="Xine multimedia engine"
 HOMEPAGE="http://xinehq.de/"
 SRC_URI="mirror://sourceforge/xine/${P}.tar.bz2"
 PATCH_URI="
-	mirror://portage/media-libs/${PN}/files/${P}-libmpeg2-vis.patch
-	mirror://portage/media-libs/${PN}/files/${P}-buffer_h_ansi.patch
-	mirror://portage/media-libs/${PN}/files/${P}-ffmpeg.patch
-	mirror://portage/media-libs/${PN}/files/${P}-GetImagePixels.patch
-	1.1.14-cygwin.patch
+	1.1.16.1-cygwin.patch
 	1.1.15-strcasestr.patch
 	1.1.14-xv.patch
-	1.1.15-libtool22.patch
 	1.1.14-libiconv.patch
+	1.1.16.1-libtool22.patch
 "
 
 PKG_NAMES="${PN} libxine1 libxine-devel"

@@ -1,6 +1,6 @@
---- origsrc/xine-lib-1.1.14/configure.ac	2008-06-26 19:45:34.000000000 -0500
-+++ src/xine-lib-1.1.14/configure.ac	2008-07-04 14:56:50.562500000 -0500
-@@ -2244,7 +2248,7 @@
+--- origsrc/xine-lib-1.1.16.1/configure.ac	2009-02-03 21:57:51.113125000 -0600
++++ src/xine-lib-1.1.16.1/configure.ac	2009-02-03 22:04:24.519375000 -0600
+@@ -2249,7 +2250,7 @@ case "$host_or_hostalias" in
  
      case "$host_or_hostalias" in
        *-*-cygwin) 
@@ -9,7 +9,16 @@
          ;;
      esac
      ;;
-@@ -3225,7 +3229,7 @@
+@@ -2448,7 +2449,7 @@ XINE_REL_PLUGINDIR="$XINE_REL_PLUGINROOT
+ XINE_REL_FONTDIR="`makeexpand "$XINE_FONTDIR" | sed -e "s,^${prefix}/,,"`"
+ XINE_REL_LOCALEDIR="`makeexpand "$XINE_LOCALEDIR" | sed -e "s,^${prefix}/,,"`"
+ XINE_PKGCONFIG_DIR="`makeexpand "$pkgconfigdir"`"
+-if test "x$SYS" = "xmingw32" -o "x$SYS" = "xcygwin"; then
++if test "x$SYS" = "xmingw32"; then
+   dnl prefix in xine-config
+   XINE_CONFIG_PREFIX="\$(cd \$(dirname \$0)/..; pwd)"
+   dnl installation directories (in xine-config)
+@@ -3220,7 +3221,7 @@ fi
  dnl warn if no X11 plugins will be built
  if test "x$no_x" = "xyes"; then
    case $host in
@@ -18,9 +27,9 @@
      *-darwin*) ;;
      *)
        echo
---- origsrc/xine-lib-1.1.14/src/input/input_dvd.c	2008-06-14 18:15:00.000000000 -0500
-+++ src/xine-lib-1.1.14/src/input/input_dvd.c	2008-07-04 14:18:34.531250000 -0500
-@@ -1782,6 +1782,8 @@
+--- origsrc/xine-lib-1.1.16.1/src/input/input_dvd.c	2009-01-10 19:25:33.000000000 -0600
++++ src/xine-lib-1.1.16.1/src/input/input_dvd.c	2009-02-03 22:00:22.488125000 -0600
+@@ -1785,6 +1785,8 @@ static void *init_class (xine_t *xine, v
  
  #ifdef HOST_OS_DARWIN
    if ((dvdcss = dlopen("libdvdcss.2.dylib", RTLD_LAZY)) != NULL)
@@ -29,8 +38,8 @@
  #else
    if ((dvdcss = dlopen("libdvdcss.so.2", RTLD_LAZY)) != NULL)
  #endif
---- origsrc/xine-lib-1.1.14/src/input/libdvdnav/bswap.h	2008-04-17 11:48:57.000000000 -0500
-+++ src/xine-lib-1.1.14/src/input/libdvdnav/bswap.h	2008-07-04 14:18:34.546875000 -0500
+--- origsrc/xine-lib-1.1.16.1/src/input/libdvdnav/bswap.h	2008-04-17 11:48:57.000000000 -0500
++++ src/xine-lib-1.1.16.1/src/input/libdvdnav/bswap.h	2009-02-03 22:00:22.503750000 -0600
 @@ -35,7 +35,7 @@
  #include <sys/param.h>
  #endif
@@ -49,9 +58,9 @@
  #define B2N_16(x) \
   x = ((((x) & 0xff00) >> 8) | \
        (((x) & 0x00ff) << 8))
---- origsrc/xine-lib-1.1.14/src/input/libdvdnav/dvd_input.c	2008-04-17 11:48:57.000000000 -0500
-+++ src/xine-lib-1.1.14/src/input/libdvdnav/dvd_input.c	2008-07-04 14:18:34.562500000 -0500
-@@ -366,6 +366,8 @@
+--- origsrc/xine-lib-1.1.16.1/src/input/libdvdnav/dvd_input.c	2008-04-17 11:48:57.000000000 -0500
++++ src/xine-lib-1.1.16.1/src/input/libdvdnav/dvd_input.c	2009-02-03 22:00:22.503750000 -0600
+@@ -366,6 +366,8 @@ int dvdinput_setup(void)
  
  #ifdef HOST_OS_DARWIN
    dvdcss_library = dlopen("libdvdcss.2.dylib", RTLD_LAZY);
@@ -60,8 +69,8 @@
  #elif defined(WIN32)
    dvdcss_library = dlopen("libdvdcss.dll", RTLD_LAZY);
  #else
---- origsrc/xine-lib-1.1.14/src/xine-utils/utils.c	2008-06-25 08:04:09.000000000 -0500
-+++ src/xine-lib-1.1.14/src/xine-utils/utils.c	2008-07-04 14:18:34.640625000 -0500
+--- origsrc/xine-lib-1.1.16.1/src/xine-utils/utils.c	2009-01-10 19:25:34.000000000 -0600
++++ src/xine-lib-1.1.16.1/src/xine-utils/utils.c	2009-02-03 22:00:22.519375000 -0600
 @@ -51,7 +51,7 @@
  #include <langinfo.h>
  #endif
@@ -71,7 +80,7 @@
  #include <ctype.h>
  #include <windows.h>
  #endif
-@@ -380,7 +380,7 @@
+@@ -380,7 +380,7 @@ const char *xine_get_homedir(void) {
  #endif /* WIN32 */
  }
  
@@ -80,9 +89,9 @@
  static void xine_get_rootdir(char *rootdir, size_t maxlen) {
    char *s;
  
---- origsrc/xine-lib-1.1.14/src/xine-utils/xineutils.h	2008-06-25 08:04:09.000000000 -0500
-+++ src/xine-lib-1.1.14/src/xine-utils/xineutils.h	2008-07-04 14:18:34.671875000 -0500
-@@ -635,7 +635,7 @@
+--- origsrc/xine-lib-1.1.16.1/src/xine-utils/xineutils.h	2008-06-25 08:04:09.000000000 -0500
++++ src/xine-lib-1.1.16.1/src/xine-utils/xineutils.h	2009-02-03 22:00:22.519375000 -0600
+@@ -635,7 +635,7 @@ void *xine_xmalloc_aligned(size_t alignm
   */
  const char *xine_get_homedir(void) XINE_PROTECTED;
  
