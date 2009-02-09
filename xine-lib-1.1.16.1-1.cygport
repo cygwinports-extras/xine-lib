@@ -85,7 +85,6 @@ CYGCONF_ARGS="
   --disable-syncfb
   --disable-v4l
   --disable-vidix
-  --disable-xinerama
   --disable-xv
   --disable-xvmc
 
