@@ -11,7 +11,7 @@ PATCH_URI="
 
 PKG_NAMES="${PN} libxine1 libxine-devel"
 PKG_HINTS="setup lib devel"
-libxine_devel_CONTENTS="usr/bin/xine-* usr/include/ usr/lib/lib*
+libxine_devel_CONTENTS="usr/bin/xine-config usr/bin/xine-list-* usr/include/ usr/lib/lib*
                         usr/lib/pkgconfig/ usr/share/aclocal/ usr/share/man/man1/"
 
 pdir="usr/lib/xine/plugins/1.$((PV[3] + 9))"
@@ -139,3 +139,5 @@ src_install() {
 		error "${err} module(s) were not built shared."
 	fi
 }
+
+export LTCFLAGS="${CFLAGS}"

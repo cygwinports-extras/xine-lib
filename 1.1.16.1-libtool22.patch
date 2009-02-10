@@ -8,3 +8,12 @@
  AC_SUBST(LIBTOOL_DEPS)
  if ${CONFIG_SHELL} ./libtool --features | grep "enable static" >/dev/null; then
    STATIC="-static"
+@@ -2667,7 +2668,7 @@ AH_BOTTOM([
+ 
+ 
+ dnl Common cflags for all platforms
+-CFLAGS="-D_REENTRANT -D_FILE_OFFSET_BITS=64 -DXINE_COMPILE \$(MULTIPASS_CFLAGS) $CFLAGS"
++CPPFLAGS="-D_REENTRANT -D_FILE_OFFSET_BITS=64 -DXINE_COMPILE \$(MULTIPASS_CFLAGS) $CPPFLAGS"
+ DEBUG_CFLAGS="-D_REENTRANT -D_FILE_OFFSET_BITS=64 -DXINE_COMPILE $DEBUG_CFLAGS"
+ 
+ if test "x$enable_debug" = "xyes"; then
