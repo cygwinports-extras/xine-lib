@@ -76,41 +76,41 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack xine-lib-1.1.16.1-X-src.tar.bz2
+  unpack xine-lib-1.1.16.2-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./xine-lib-1.1.16.1-X.cygport all
+  cygport ./xine-lib-1.1.16.2-X.cygport all
 
 This will create:
-  /usr/src/xine-lib-1.1.16.1-X-src.tar.bz2
-  /usr/src/xine-lib-1.1.16.1-X.tar.bz2
-  /usr/src/libxine-devel-1.1.16.1-X.tar.bz2
-  /usr/src/libxine1-1.1.16.1-X.tar.bz2
+  /usr/src/xine-lib-1.1.16.2-X-src.tar.bz2
+  /usr/src/xine-lib-1.1.16.2-X.tar.bz2
+  /usr/src/libxine-devel-1.1.16.2-X.tar.bz2
+  /usr/src/libxine1-1.1.16.2-X.tar.bz2
 
-  /usr/src/libxine1-a52-1.1.16.1-X.tar.bz2
-  /usr/src/libxine1-aa-1.1.16.1-X.tar.bz2
-  /usr/src/libxine1-arts-1.1.16.1-X.tar.bz2
-  /usr/src/libxine1-caca-1.1.16.1-X.tar.bz2
-  /usr/src/libxine1-dts-1.1.16.1-X.tar.bz2
-  /usr/src/libxine1-dvd-1.1.16.1-X.tar.bz2
-  /usr/src/libxine1-esd-1.1.16.1-X.tar.bz2
-  /usr/src/libxine1-faad-1.1.16.1-X.tar.bz2
-  /usr/src/libxine1-ffmpeg-1.1.16.1-X.tar.bz2
-  /usr/src/libxine1-flac-1.1.16.1-X.tar.bz2
-  /usr/src/libxine1-gdk_pixbuf-1.1.16.1-X.tar.bz2
-  /usr/src/libxine1-gnome_vfs-1.1.16.1-X.tar.bz2
-  /usr/src/libxine1-image-1.1.16.1-X.tar.bz2
-  /usr/src/libxine1-mad-1.1.16.1-X.tar.bz2
-  /usr/src/libxine1-mng-1.1.16.1-X.tar.bz2
-  /usr/src/libxine1-musepack-1.1.16.1-X.tar.bz2
-  /usr/src/libxine1-ogg-1.1.16.1-X.tar.bz2
-  /usr/src/libxine1-opengl-1.1.16.1-X.tar.bz2
-  /usr/src/libxine1-sdl-1.1.16.1-X.tar.bz2
-  /usr/src/libxine1-vcd-1.1.16.1-X.tar.bz2
-  /usr/src/libxine1-wavpack-1.1.16.1-X.tar.bz2
-  /usr/src/libxine1-x11-1.1.16.1-X.tar.bz2
-  /usr/src/libxine1-xcb-1.1.16.1-X.tar.bz2
+  /usr/src/libxine1-a52-1.1.16.2-X.tar.bz2
+  /usr/src/libxine1-aa-1.1.16.2-X.tar.bz2
+  /usr/src/libxine1-arts-1.1.16.2-X.tar.bz2
+  /usr/src/libxine1-caca-1.1.16.2-X.tar.bz2
+  /usr/src/libxine1-dts-1.1.16.2-X.tar.bz2
+  /usr/src/libxine1-dvd-1.1.16.2-X.tar.bz2
+  /usr/src/libxine1-esd-1.1.16.2-X.tar.bz2
+  /usr/src/libxine1-faad-1.1.16.2-X.tar.bz2
+  /usr/src/libxine1-ffmpeg-1.1.16.2-X.tar.bz2
+  /usr/src/libxine1-flac-1.1.16.2-X.tar.bz2
+  /usr/src/libxine1-gdk_pixbuf-1.1.16.2-X.tar.bz2
+  /usr/src/libxine1-gnome_vfs-1.1.16.2-X.tar.bz2
+  /usr/src/libxine1-image-1.1.16.2-X.tar.bz2
+  /usr/src/libxine1-mad-1.1.16.2-X.tar.bz2
+  /usr/src/libxine1-mng-1.1.16.2-X.tar.bz2
+  /usr/src/libxine1-musepack-1.1.16.2-X.tar.bz2
+  /usr/src/libxine1-ogg-1.1.16.2-X.tar.bz2
+  /usr/src/libxine1-opengl-1.1.16.2-X.tar.bz2
+  /usr/src/libxine1-sdl-1.1.16.2-X.tar.bz2
+  /usr/src/libxine1-vcd-1.1.16.2-X.tar.bz2
+  /usr/src/libxine1-wavpack-1.1.16.2-X.tar.bz2
+  /usr/src/libxine1-x11-1.1.16.2-X.tar.bz2
+  /usr/src/libxine1-xcb-1.1.16.2-X.tar.bz2
 
 -------------------------------------------
 
@@ -176,34 +176,34 @@ Files included in the binary packages:
   /usr/lib/xine/plugins/1.25/xineplug_inp_rtsp.dll
   /usr/lib/xine/plugins/1.25/xineplug_inp_stdin_fifo.dll
   /usr/lib/xine/plugins/1.25/xineplug_vo_out_none.dll
-  /usr/share/doc/xine-lib-1.1.16.1/ABOUT-NLS
-  /usr/share/doc/xine-lib-1.1.16.1/AUTHORS
-  /usr/share/doc/xine-lib-1.1.16.1/COPYING
-  /usr/share/doc/xine-lib-1.1.16.1/COPYING.LIB
-  /usr/share/doc/xine-lib-1.1.16.1/CREDITS
-  /usr/share/doc/xine-lib-1.1.16.1/ChangeLog
-  /usr/share/doc/xine-lib-1.1.16.1/INSTALL
-  /usr/share/doc/xine-lib-1.1.16.1/NEWS
-  /usr/share/doc/xine-lib-1.1.16.1/README
-  /usr/share/doc/xine-lib-1.1.16.1/README.MINGWCROSS
-  /usr/share/doc/xine-lib-1.1.16.1/README.WIN32
-  /usr/share/doc/xine-lib-1.1.16.1/README.dvb
-  /usr/share/doc/xine-lib-1.1.16.1/README.dxr3
-  /usr/share/doc/xine-lib-1.1.16.1/README.freebsd
-  /usr/share/doc/xine-lib-1.1.16.1/README.irix
-  /usr/share/doc/xine-lib-1.1.16.1/README.network_dvd
-  /usr/share/doc/xine-lib-1.1.16.1/README.opengl
-  /usr/share/doc/xine-lib-1.1.16.1/README.solaris
-  /usr/share/doc/xine-lib-1.1.16.1/README.syncfb
-  /usr/share/doc/xine-lib-1.1.16.1/README_xxmc.html
-  /usr/share/doc/xine-lib-1.1.16.1/TODO
-  /usr/share/doc/xine-lib-1.1.16.1/faq.html
-  /usr/share/doc/xine-lib-1.1.16.1/faq.txt
-  /usr/share/doc/xine-lib-1.1.16.1/hackersguide/architecture.png
-  /usr/share/doc/xine-lib-1.1.16.1/hackersguide/hackersguide.html
-  /usr/share/doc/xine-lib-1.1.16.1/hackersguide/library.png
-  /usr/share/doc/xine-lib-1.1.16.1/hackersguide/overlays.png
-  /usr/share/doc/xine-lib-1.1.16.1/hackersguide/post_frame.png
+  /usr/share/doc/xine-lib-1.1.16.2/ABOUT-NLS
+  /usr/share/doc/xine-lib-1.1.16.2/AUTHORS
+  /usr/share/doc/xine-lib-1.1.16.2/COPYING
+  /usr/share/doc/xine-lib-1.1.16.2/COPYING.LIB
+  /usr/share/doc/xine-lib-1.1.16.2/CREDITS
+  /usr/share/doc/xine-lib-1.1.16.2/ChangeLog
+  /usr/share/doc/xine-lib-1.1.16.2/INSTALL
+  /usr/share/doc/xine-lib-1.1.16.2/NEWS
+  /usr/share/doc/xine-lib-1.1.16.2/README
+  /usr/share/doc/xine-lib-1.1.16.2/README.MINGWCROSS
+  /usr/share/doc/xine-lib-1.1.16.2/README.WIN32
+  /usr/share/doc/xine-lib-1.1.16.2/README.dvb
+  /usr/share/doc/xine-lib-1.1.16.2/README.dxr3
+  /usr/share/doc/xine-lib-1.1.16.2/README.freebsd
+  /usr/share/doc/xine-lib-1.1.16.2/README.irix
+  /usr/share/doc/xine-lib-1.1.16.2/README.network_dvd
+  /usr/share/doc/xine-lib-1.1.16.2/README.opengl
+  /usr/share/doc/xine-lib-1.1.16.2/README.solaris
+  /usr/share/doc/xine-lib-1.1.16.2/README.syncfb
+  /usr/share/doc/xine-lib-1.1.16.2/README_xxmc.html
+  /usr/share/doc/xine-lib-1.1.16.2/TODO
+  /usr/share/doc/xine-lib-1.1.16.2/faq.html
+  /usr/share/doc/xine-lib-1.1.16.2/faq.txt
+  /usr/share/doc/xine-lib-1.1.16.2/hackersguide/architecture.png
+  /usr/share/doc/xine-lib-1.1.16.2/hackersguide/hackersguide.html
+  /usr/share/doc/xine-lib-1.1.16.2/hackersguide/library.png
+  /usr/share/doc/xine-lib-1.1.16.2/hackersguide/overlays.png
+  /usr/share/doc/xine-lib-1.1.16.2/hackersguide/post_frame.png
   /usr/share/locale/cs/LC_MESSAGES/libxine1.mo
   /usr/share/locale/de/LC_MESSAGES/libxine1.mo
   /usr/share/locale/es/LC_MESSAGES/libxine1.mo
@@ -372,8 +372,8 @@ Files included in the binary packages:
 
 Port Notes:
 
------ version 1.1.16.1-2 -----
-Packaging fix.
+----- version 1.1.16.2-1 -----
+Version bump.
 
 ----- version 1.1.16.1-1 -----
 Version bump.

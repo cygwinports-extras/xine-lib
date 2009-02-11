@@ -1,6 +1,6 @@
---- origsrc/xine-lib-1.1.16.1/configure.ac	2009-02-03 21:57:51.113125000 -0600
-+++ src/xine-lib-1.1.16.1/configure.ac	2009-02-03 22:04:24.519375000 -0600
-@@ -2249,7 +2250,7 @@ case "$host_or_hostalias" in
+--- origsrc/xine-lib-1.1.16.2/configure.ac	2009-02-03 21:57:51.113125000 -0600
++++ src/xine-lib-1.1.16.2/configure.ac	2009-02-10 15:04:24.519375000 -0600
+@@ -2255,7 +2255,7 @@ case "$host_or_hostalias" in
  
      case "$host_or_hostalias" in
        *-*-cygwin) 
@@ -9,16 +9,16 @@
          ;;
      esac
      ;;
-@@ -2448,7 +2449,7 @@ XINE_REL_PLUGINDIR="$XINE_REL_PLUGINROOT
- XINE_REL_FONTDIR="`makeexpand "$XINE_FONTDIR" | sed -e "s,^${prefix}/,,"`"
+@@ -2455,7 +2455,7 @@ XINE_REL_PLUGINDIR="$XINE_REL_PLUGINROOT
  XINE_REL_LOCALEDIR="`makeexpand "$XINE_LOCALEDIR" | sed -e "s,^${prefix}/,,"`"
  XINE_PKGCONFIG_DIR="`makeexpand "$pkgconfigdir"`"
+ dnl platform specific runtime directories
 -if test "x$SYS" = "xmingw32" -o "x$SYS" = "xcygwin"; then
 +if test "x$SYS" = "xmingw32"; then
-   dnl prefix in xine-config
-   XINE_CONFIG_PREFIX="\$(cd \$(dirname \$0)/..; pwd)"
-   dnl installation directories (in xine-config)
-@@ -3220,7 +3221,7 @@ fi
+   AC_DEFINE(XINE_PLUGINROOT,[xine_get_pluginroot()],[Define this to general plugins directory location])
+   AC_DEFINE(XINE_PLUGINDIR,[xine_get_plugindir()],[Define this to specific plugins directory location])
+   AC_DEFINE(XINE_FONTDIR,[xine_get_fontdir()],[Define this to osd fonts dir location])
+@@ -3217,7 +3217,7 @@ fi
  dnl warn if no X11 plugins will be built
  if test "x$no_x" = "xyes"; then
    case $host in
