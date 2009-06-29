@@ -1,5 +1,5 @@
 category: Audio Video
-requires: cygwin libxine1 libxcb1 libxcb-shape0 libxcb-shm0
+requires: libxine1 libxcb1 libxcb-shape0 libxcb-shm0
 external-source: xine-lib
 sdesc: "Xine multimedia library (XCB plugin)"
 ldesc: "xine is a free multimedia player. It plays back CDs, DVDs, and

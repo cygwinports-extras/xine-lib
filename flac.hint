@@ -1,5 +1,5 @@
 category: Audio Video
-requires: cygwin libxine1 libFLAC8
+requires: libxine1 libFLAC8
 external-source: xine-lib
 sdesc: "Xine multimedia library (FLAC plugin)"
 ldesc: "xine is a free multimedia player. It plays back CDs, DVDs, and

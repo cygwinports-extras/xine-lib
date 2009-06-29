@@ -1,5 +1,5 @@
 category: Audio Video
-requires: cygwin libxine1 libdvdcss2 libdvdnav4
+requires: libxine1 libdvdcss2 libdvdnav4
 external-source: xine-lib
 sdesc: "Xine multimedia library (DVD plugin)"
 ldesc: "xine is a free multimedia player. It plays back CDs, DVDs, and

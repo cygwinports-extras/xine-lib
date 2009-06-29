@@ -1,5 +1,5 @@
 category: Audio Video
-requires: cygwin libxine1 libmng1
+requires: libxine1 libmng1
 external-source: xine-lib
 sdesc: "Xine multimedia library (MNG plugin)"
 ldesc: "xine is a free multimedia player. It plays back CDs, DVDs, and

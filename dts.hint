@@ -1,5 +1,5 @@
 category: Audio Video
-requires: cygwin libxine1 libdca0
+requires: libxine1 libdca0
 external-source: xine-lib
 sdesc: "Xine multimedia library (DTS plugin)"
 ldesc: "xine is a free multimedia player. It plays back CDs, DVDs, and
