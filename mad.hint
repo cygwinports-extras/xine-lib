@@ -1,4 +1,4 @@
-category: Audio Video
+category: Audio
 requires: libxine1 libmad0
 external-source: xine-lib
 sdesc: "Xine multimedia library (MAD plugin)"

@@ -2,11 +2,12 @@ DESCRIPTION="Xine multimedia engine"
 HOMEPAGE="http://xinehq.de/"
 SRC_URI="mirror://sourceforge/xine/${P}.tar.bz2"
 PATCH_URI="
+	http://patch-tracking.debian.net/patch/misc/dl/xine-lib/1.1.16.3-1/src/demuxers/demux_mod.c
 	1.1.16.2-cygwin.patch
-	1.1.15-strcasestr.patch
 	1.1.14-xv.patch
 	1.1.14-libiconv.patch
 	1.1.16.1-libtool22.patch
+	1.1.16.3-dvdnav4.patch
 "
 
 PKG_NAMES="${PN} libxine1 libxine-devel"
@@ -14,7 +15,7 @@ PKG_HINTS="setup lib devel"
 libxine_devel_CONTENTS="usr/bin/xine-config usr/bin/xine-list-* usr/include/ usr/lib/lib*
                         usr/lib/pkgconfig/ usr/share/aclocal/ usr/share/man/man1/"
 
-pdir="usr/lib/xine/plugins/1.$((PV[3] + 9))"
+pdir="usr/lib/xine/plugins/1.$((PV[3] + 10))"
 
 for mod in a52 aa arts caca dvd dts esd faad ffmpeg flac gdk_pixbuf gnome_vfs \
            image mad mng musepack ogg opengl sdl vcd wavpack x11 xcb
@@ -39,6 +40,10 @@ do
 			declare libxine1_${mod}_CONTENTS+=" ${pdir}/*_spu.dll"
 			libxine1_CONTENTS+=" --exclude=xineplug*_spu.dll"
 			;;
+		ffmpeg)
+			declare libxine1_${mod}_CONTENTS+=" ${pdir}/post/*_planar.dll"
+			libxine1_CONTENTS+=" --exclude=xineplug_post_planar.dll"
+			;;
 		ogg)
 			for ogg in speex theora vorbis
 			do
@@ -61,7 +66,7 @@ CFLAGS+=" -frename-registers -ffunction-sections"
 CYGCONF_ARGS="
   --disable-altivec
   --disable-dependency-tracking
-  --disable-ipv6
+  --enable-ipv6
   --enable-mmap
   --disable-rpath
   --disable-static
@@ -94,13 +99,13 @@ CYGCONF_ARGS="
   --without-alsa
   --disable-coreaudio
   --without-fusionsound
-  --with-jack
+  --without-jack
   --without-pulseaudio
 
   --enable-a52dec --with-external-a52dec
   --enable-asf
   --enable-dts --with-external-libdts
-  --with-external-dvdnav
+  --with-external-dvdnav --disable-dvdnavtest --with-dvdnav-prefix=/usr
   --enable-faad --with-external-libfaad
   --with-external-ffmpeg
   --enable-gdkpixbuf
@@ -120,6 +125,7 @@ CYGCONF_ARGS="
   --disable-samba
   --disable-w32dll
 "
+MAKEOPTS+=" DVDNAV_LIBS=-ldvdnav"
 
 src_install() {
 	cd ${B}

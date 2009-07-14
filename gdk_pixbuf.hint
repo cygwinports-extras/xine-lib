@@ -1,4 +1,4 @@
-category: Audio Video
+category: Video
 requires: libxine1 libglib2.0_0 libgdk_pixbuf2.0_0
 external-source: xine-lib
 sdesc: "Xine multimedia library (GdkPixbuf plugin)"

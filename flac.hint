@@ -1,4 +1,4 @@
-category: Audio Video
+category: Audio
 requires: libxine1 libFLAC8
 external-source: xine-lib
 sdesc: "Xine multimedia library (FLAC plugin)"
