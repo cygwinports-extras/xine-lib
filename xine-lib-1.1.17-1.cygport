@@ -2,7 +2,6 @@ DESCRIPTION="Xine multimedia engine"
 HOMEPAGE="http://xinehq.de/"
 SRC_URI="mirror://sourceforge/xine/${P}.tar.bz2"
 PATCH_URI="
-	http://patch-tracking.debian.net/patch/misc/dl/xine-lib/1.1.16.3-1/src/demuxers/demux_mod.c
 	1.1.16.2-cygwin.patch
 	1.1.14-xv.patch
 	1.1.14-libiconv.patch
@@ -17,7 +16,7 @@ libxine_devel_CONTENTS="usr/bin/xine-config usr/bin/xine-list-* usr/include/ usr
 
 pdir="usr/lib/xine/plugins/1.$((PV[3] + 10))"
 
-for mod in a52 aa arts caca dvd dts esd faad ffmpeg flac gdk_pixbuf gnome_vfs \
+for mod in a52 dvd dts faad ffmpeg flac gdk_pixbuf \
            image mad mng musepack ogg opengl sdl vcd wavpack x11 xcb
 do
 	PKG_NAMES+=" libxine1-${mod}"
@@ -72,8 +71,8 @@ CYGCONF_ARGS="
   --disable-static
   PTHREAD_CFLAGS=  PTHREAD_LIBS=-lpthread
 
-  --enable-aalib
-  --with-caca
+  --disable-aalib
+  --without-caca
   --with-freetype --enable-antialiasing
   --with-fontconfig
   --enable-opengl
@@ -93,11 +92,11 @@ CYGCONF_ARGS="
   --disable-xv
   --disable-xvmc
 
-  --with-arts
-  --with-esound
   --enable-oss
   --without-alsa
+  --without-arts
   --disable-coreaudio
+  --without-esound
   --without-fusionsound
   --without-jack
   --without-pulseaudio
@@ -109,7 +108,7 @@ CYGCONF_ARGS="
   --enable-faad --with-external-libfaad
   --with-external-ffmpeg
   --enable-gdkpixbuf
-  --enable-gnomevfs
+  --disable-gnomevfs
   --with-imagemagick
   --with-libflac --disable-libFLACtest
   --enable-mad --with-external-libmad
