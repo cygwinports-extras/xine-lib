@@ -8,8 +8,8 @@ PATCH_URI="
 	1.1.16.1-libtool22.patch
 "
 
-PKG_NAMES="${PN} libxine1 libxine-devel"
-PKG_HINTS="setup lib devel"
+PKG_NAMES="libxine1 libxine-devel"
+PKG_HINTS="libxine1 libxine-devel"
 libxine_devel_CONTENTS="usr/bin/xine-config usr/bin/xine-list-* usr/include/ usr/lib/lib*
                         usr/lib/pkgconfig/ usr/share/aclocal/ usr/share/man/man1/"
 
