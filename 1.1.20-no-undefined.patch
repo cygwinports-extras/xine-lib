@@ -1,0 +1,31 @@
+--- origsrc/xine-lib-1.1.20/m4/attributes.m4	2011-10-04 16:42:53.000000000 -0500
++++ src/xine-lib-1.1.20/m4/attributes.m4	2011-11-28 02:15:37.734470200 -0600
+@@ -114,7 +114,7 @@ AC_DEFUN([CC_NOUNDEFINED], [
+      dnl use it only for libraries in mingw32-w64 
+ 
+      *-freebsd* | *-openbsd*) ;;
+-     *-mingw*)
++     *-cygwin* | *-mingw*)
+         LDFLAGS_NOUNDEFINED="-no-undefined"
+         ;;
+      *)
+--- origsrc/xine-lib-1.1.20/src/xine-engine/Makefile.am	2011-10-04 16:42:53.000000000 -0500
++++ src/xine-lib-1.1.20/src/xine-engine/Makefile.am	2011-11-28 02:28:52.185910200 -0600
+@@ -10,7 +10,7 @@ lib_LTLIBRARIES = libxine.la
+ XINEUTILS_LIB  = $(top_builddir)/src/xine-utils/libxineutils.la
+ DEF_FILE = libxine-$(XINE_MAJOR).def
+ if WIN32
+-def_ldflags=-Wl,--output-def,$(DEF_FILE) $(LDFLAGS_NOUNDEFINED)
++def_ldflags=-Wl,--output-def,$(DEF_FILE)
+ endif
+ 
+ libxine_la_SOURCES = xine.c metronom.c configfile.c buffer.c \
+@@ -32,7 +32,7 @@ libxine_la_LIBADD = $(PTHREAD_LIBS) $(DY
+ 
+ libxine_la_LDFLAGS =  \
+ 	-version-info $(XINE_LT_CURRENT):$(XINE_LT_REVISION):$(XINE_LT_AGE) \
+-	$(def_ldflags)
++	$(def_ldflags) $(LDFLAGS_NOUNDEFINED)
+ 
+ 
+ xineinclude_HEADERS  = buffer.h metronom.h configfile.h vo_scale.h \

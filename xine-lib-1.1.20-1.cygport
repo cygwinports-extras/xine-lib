@@ -1,11 +1,12 @@
 DESCRIPTION="Xine multimedia engine"
-HOMEPAGE="http://xinehq.de/"
-SRC_URI="mirror://sourceforge/xine/${P}.tar.bz2"
+HOMEPAGE="http://www.xine-project.org/"
+SRC_URI="mirror://sourceforge/xine/${P}.tar.xz"
 PATCH_URI="
 	1.1.16.2-cygwin.patch
 	1.1.14-xv.patch
 	1.1.14-libiconv.patch
 	1.1.16.1-libtool22.patch
+	1.1.20-no-undefined.patch
 "
 
 PKG_NAMES="libxine1 libxine-devel"
@@ -15,8 +16,8 @@ libxine_devel_CONTENTS="usr/bin/xine-config usr/bin/xine-list-* usr/include/ usr
 
 pdir="usr/lib/xine/plugins/1.$((PV[3] + 10))"
 
-for mod in a52 dvd dts faad ffmpeg flac gdk_pixbuf \
-           image mad mng musepack ogg opengl sdl vcd wavpack x11 xcb
+for mod in a52 dvd dts faad ffmpeg flac gdk_pixbuf image mad mng musepack \
+           ogg opengl pulseaudio sdl vcd wavpack x11 xcb
 do
 	PKG_NAMES+=" libxine1-${mod}"
 	PKG_HINTS+=" ${mod}"
@@ -57,7 +58,7 @@ libxine1_CONTENTS+=" usr/bin/cygxine-1.dll
                      ${pdir} usr/share/doc/ usr/share/locale/
                      usr/share/man/man5/ usr/share/xine/"
 
-DIFF_EXCLUDES+=" configure.h configure.h.in m4 po xine.h xine-config build_rpms.sh"
+DIFF_EXCLUDES+=" configure.h configure.h.in xine.h xine-config build_rpms.sh"
 
 NO_AUTOPOINT=1
 CFLAGS+=" -frename-registers -ffunction-sections"
@@ -98,7 +99,7 @@ CYGCONF_ARGS="
   --without-esound
   --without-fusionsound
   --without-jack
-  --without-pulseaudio
+  --with-pulseaudio
 
   --enable-a52dec --with-external-a52dec
   --enable-asf
