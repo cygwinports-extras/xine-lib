@@ -1,5 +1,5 @@
 category: Audio Video
-requires: libxine1 libcdio12 libvcdinfo0
+requires: libxine1 libcdio13 libvcdinfo0
 external-source: xine-lib
 sdesc: "Xine multimedia library (VCD plugin)"
 ldesc: "xine is a free multimedia player. It plays back CDs, DVDs, and
