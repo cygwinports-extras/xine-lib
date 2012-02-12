@@ -146,3 +146,5 @@ src_install() {
 }
 
 export LTCFLAGS="${CFLAGS}"
+
+KEEP_LA_FILES="none"
