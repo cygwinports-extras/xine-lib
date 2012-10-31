@@ -1,14 +1,5 @@
 --- origsrc/xine-lib-1.1.16.2/configure.ac	2009-02-03 21:57:51.113125000 -0600
 +++ src/xine-lib-1.1.16.2/configure.ac	2009-02-10 15:04:24.519375000 -0600
-@@ -2255,7 +2255,7 @@ case "$host_or_hostalias" in
- 
-     case "$host_or_hostalias" in
-       *-*-cygwin) 
--        LIBS="$LIBS @INTLLIBS@ -lkernel32"
-+        LIBS="$LIBS $LTLIBINTL"
-         ;;
-     esac
-     ;;
 @@ -2455,7 +2455,7 @@ XINE_REL_PLUGINDIR="$XINE_REL_PLUGINROOT
  XINE_REL_LOCALEDIR="`makeexpand "$XINE_LOCALEDIR" | sed -e "s,^${prefix}/,,"`"
  XINE_PKGCONFIG_DIR="`makeexpand "$pkgconfigdir"`"
@@ -69,26 +60,6 @@
  #elif defined(WIN32)
    dvdcss_library = dlopen("libdvdcss.dll", RTLD_LAZY);
  #else
---- origsrc/xine-lib-1.1.16.1/src/xine-utils/utils.c	2009-01-10 19:25:34.000000000 -0600
-+++ src/xine-lib-1.1.16.1/src/xine-utils/utils.c	2009-02-03 22:00:22.519375000 -0600
-@@ -51,7 +51,7 @@
- #include <langinfo.h>
- #endif
- 
--#if defined(__CYGWIN__) || defined(WIN32)
-+#if defined(WIN32)
- #include <ctype.h>
- #include <windows.h>
- #endif
-@@ -380,7 +380,7 @@ const char *xine_get_homedir(void) {
- #endif /* WIN32 */
- }
- 
--#if defined(WIN32) || defined(__CYGWIN__)
-+#if defined(WIN32)
- static void xine_get_rootdir(char *rootdir, size_t maxlen) {
-   char *s;
- 
 --- origsrc/xine-lib-1.1.16.1/src/xine-utils/xineutils.h	2008-06-25 08:04:09.000000000 -0500
 +++ src/xine-lib-1.1.16.1/src/xine-utils/xineutils.h	2009-02-03 22:00:22.519375000 -0600
 @@ -635,7 +635,7 @@ void *xine_xmalloc_aligned(size_t alignm

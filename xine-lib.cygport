@@ -1,4 +1,13 @@
-DESCRIPTION="Xine multimedia engine"
+NAME="xine-lib"
+VERSION=1.1.21
+RELEASE=1
+CATEGORY="Audio Video"
+SUMMARY="Xine multimedia engine"
+DESCRIPTION="xine is a free multimedia player. It plays back CDs, DVDs, and
+VCDs. It also decodes multimedia files like AVI, MOV, WMV, and MP3 from local
+disk drives, and displays multimedia streamed over the Internet. It interprets
+many of the most common multimedia formats available - and some of the most
+uncommon formats, too."
 HOMEPAGE="http://www.xine-project.org/"
 SRC_URI="mirror://sourceforge/xine/${P}.tar.xz"
 PATCH_URI="
@@ -6,21 +15,19 @@ PATCH_URI="
 	1.1.14-xv.patch
 	1.1.14-libiconv.patch
 	1.1.16.1-libtool22.patch
-	1.1.20-no-undefined.patch
 "
 
 PKG_NAMES="libxine1 libxine-devel"
-PKG_HINTS="libxine1 libxine-devel"
+libxine_devel_SUMMARY="${SUMMARY} (development)"
 libxine_devel_CONTENTS="usr/bin/xine-config usr/bin/xine-list-* usr/include/ usr/lib/lib*
                         usr/lib/pkgconfig/ usr/share/aclocal/ usr/share/man/man1/"
 
-pdir="usr/lib/xine/plugins/1.$((PV[3] + 10))"
+pdir="usr/lib/xine/plugins/1.30"
 
 for mod in a52 dvd dts faad ffmpeg flac gdk_pixbuf image mad mng musepack \
            ogg opengl pulseaudio sdl vcd wavpack x11 xcb
 do
 	PKG_NAMES+=" libxine1-${mod}"
-	PKG_HINTS+=" ${mod}"
 
 	case ${mod} in
 		ffmpeg)		dll=ff ;;
@@ -28,9 +35,10 @@ do
 		musepack)	dll=mpc ;;
 		x11)		dll=xshm ;;
 		xcb)		dll=xcbshm ;;
-		*)			dll=${mod} ;;
+		*)		dll=${mod} ;;
 	esac
 
+	declare libxine1_${mod}_SUMMARY="${SUMMARY} (${mod} plugin)"
 	declare libxine1_${mod}_CONTENTS="${pdir}/*_${dll}.dll"
 	libxine1_CONTENTS+=" --exclude=xineplug*_${dll}.dll"
 
@@ -54,6 +62,7 @@ do
 done
 unset dll mod ogg
 
+libxine1_SUMMARY="${SUMMARY} (runtime)"
 libxine1_CONTENTS+=" usr/bin/cygxine-1.dll
                      ${pdir} usr/share/doc/ usr/share/locale/
                      usr/share/man/man5/ usr/share/xine/"
@@ -124,7 +133,6 @@ CYGCONF_ARGS="
   --disable-samba
   --disable-w32dll
 "
-MAKEOPTS+=" DVDNAV_LIBS=-ldvdnav"
 
 src_install() {
 	cd ${B}
