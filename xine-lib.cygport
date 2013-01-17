@@ -1,5 +1,5 @@
 NAME="xine-lib"
-VERSION=1.1.21
+VERSION=1.2.2
 RELEASE=1
 CATEGORY="Audio Video"
 SUMMARY="Xine multimedia engine"
@@ -11,66 +11,23 @@ uncommon formats, too."
 HOMEPAGE="http://www.xine-project.org/"
 SRC_URI="mirror://sourceforge/xine/${P}.tar.xz"
 PATCH_URI="
-	1.1.16.2-cygwin.patch
-	1.1.14-xv.patch
+	1.2.2-cygwin.patch
 	1.1.14-libiconv.patch
-	1.1.16.1-libtool22.patch
 "
 
-PKG_NAMES="libxine1 libxine-devel"
+PKG_NAMES="libxine2 libxine-devel"
+libxine2_SUMMARY="${SUMMARY} (runtime)"
+libxine2_CONTENTS="usr/bin/cygxine-2.dll usr/lib/xine/plugins/2.*/
+                   usr/share/doc/ usr/share/locale/ usr/share/man/man5/
+                   usr/share/xine-lib/"
 libxine_devel_SUMMARY="${SUMMARY} (development)"
 libxine_devel_CONTENTS="usr/bin/xine-config usr/bin/xine-list-* usr/include/ usr/lib/lib*
                         usr/lib/pkgconfig/ usr/share/aclocal/ usr/share/man/man1/"
 
-pdir="usr/lib/xine/plugins/1.30"
-
-for mod in a52 dvd dts faad ffmpeg flac gdk_pixbuf image mad mng musepack \
-           ogg opengl pulseaudio sdl vcd wavpack x11 xcb
-do
-	PKG_NAMES+=" libxine1-${mod}"
-
-	case ${mod} in
-		ffmpeg)		dll=ff ;;
-		image)		dll=decode_image ;;
-		musepack)	dll=mpc ;;
-		x11)		dll=xshm ;;
-		xcb)		dll=xcbshm ;;
-		*)		dll=${mod} ;;
-	esac
-
-	declare libxine1_${mod}_SUMMARY="${SUMMARY} (${mod} plugin)"
-	declare libxine1_${mod}_CONTENTS="${pdir}/*_${dll}.dll"
-	libxine1_CONTENTS+=" --exclude=xineplug*_${dll}.dll"
-
-	case ${mod} in
-		dvd)
-			declare libxine1_${mod}_CONTENTS+=" ${pdir}/*_spu.dll"
-			libxine1_CONTENTS+=" --exclude=xineplug*_spu.dll"
-			;;
-		ffmpeg)
-			declare libxine1_${mod}_CONTENTS+=" ${pdir}/post/*_planar.dll"
-			libxine1_CONTENTS+=" --exclude=xineplug_post_planar.dll"
-			;;
-		ogg)
-			for ogg in speex theora vorbis
-			do
-				declare libxine1_${mod}_CONTENTS+=" ${pdir}/*_${ogg}.dll"
-				libxine1_CONTENTS+=" --exclude=xineplug*_${ogg}.dll"
-			done
-			;;
-	esac
-done
-unset dll mod ogg
-
-libxine1_SUMMARY="${SUMMARY} (runtime)"
-libxine1_CONTENTS+=" usr/bin/cygxine-1.dll
-                     ${pdir} usr/share/doc/ usr/share/locale/
-                     usr/share/man/man5/ usr/share/xine/"
-
-DIFF_EXCLUDES+=" configure.h configure.h.in xine.h xine-config build_rpms.sh"
+DIFF_EXCLUDES="configure.h configure.h.in xine.h xine-config build_rpms.sh"
 
 NO_AUTOPOINT=1
-CFLAGS+=" -frename-registers -ffunction-sections"
+
 CYGCONF_ARGS="
   --disable-altivec
   --disable-dependency-tracking
@@ -95,43 +52,41 @@ CYGCONF_ARGS="
   --disable-fb
   --without-libstk
   --disable-macosx-video
-  --disable-syncfb
   --disable-v4l
   --disable-vidix
-  --disable-xv
   --disable-xvmc
 
   --enable-oss
   --without-alsa
-  --without-arts
   --disable-coreaudio
   --without-esound
   --without-fusionsound
   --without-jack
   --with-pulseaudio
 
-  --enable-a52dec --with-external-a52dec
+  --enable-a52dec
   --enable-asf
-  --enable-dts --with-external-libdts
-  --with-external-dvdnav --disable-dvdnavtest --with-dvdnav-prefix=/usr
-  --enable-faad --with-external-libfaad
-  --with-external-ffmpeg
+  --enable-dts
+  --with-external-dvdnav --with-dvdnav-prefix=/usr
+  --enable-faad
   --enable-gdkpixbuf
   --disable-gnomevfs
   --with-imagemagick
-  --with-libflac --disable-libFLACtest
-  --enable-mad --with-external-libmad
+  --with-libflac
+  --enable-mad
   --enable-modplug
-  --enable-musepack --with-external-libmpcdec
+  --enable-musepack
   --enable-mng
   --enable-real-codecs --with-real-codecs-path=/usr/lib/win32
   --with-speex
   --with-theora
-  --enable-vcd --without-internal-vcdlibs
+  --enable-vcd
   --with-vorbis
   --with-wavpack
   --disable-samba
   --disable-w32dll
+
+  DIRECTX_LIBS=-Wl,-z,nothankyou
 "
 
 src_install() {
@@ -139,6 +94,7 @@ src_install() {
 	cyginstall
 
 	find ${D}/usr/lib/xine -name '*.dll.a' -exec rm -f '{}' +
+	rm -f ${D}/usr/lib/libxine-interface.la
 
 	# Assure that no plugins were accidentally built static
 	err=0
