@@ -86,7 +86,7 @@ CYGCONF_ARGS="
   --disable-samba
   --disable-w32dll
 
-  DIRECTX_LIBS=-Wl,-z,nothankyou
+  DIRECTX_CPPFLAGS=-Wa,--nothankyou
 "
 
 src_install() {
