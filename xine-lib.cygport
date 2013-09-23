@@ -1,5 +1,5 @@
 NAME="xine-lib"
-VERSION=1.2.2
+VERSION=1.2.3
 RELEASE=1
 CATEGORY="Audio Video"
 SUMMARY="Xine multimedia engine"
@@ -9,7 +9,7 @@ disk drives, and displays multimedia streamed over the Internet. It interprets
 many of the most common multimedia formats available - and some of the most
 uncommon formats, too."
 HOMEPAGE="http://www.xine-project.org/"
-SRC_URI="mirror://sourceforge/xine/${P}.tar.xz"
+SRC_URI="mirror://sourceforge/xine/${NAME}-${VERSION}.tar.xz"
 PATCH_URI="
 	1.2.2-cygwin.patch
 	1.1.14-libiconv.patch
@@ -87,6 +87,7 @@ CYGCONF_ARGS="
   --disable-w32dll
 
   DIRECTX_CPPFLAGS=-Wa,--nothankyou
+  cc_cv_attribute_weak=no
 "
 
 src_install() {
