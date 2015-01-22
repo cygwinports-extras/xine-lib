@@ -1,7 +1,7 @@
 NAME="xine-lib"
-VERSION=1.2.3
+VERSION=1.2.6
 RELEASE=1
-CATEGORY="Audio Video"
+CATEGORY="Libs"
 SUMMARY="Xine multimedia engine"
 DESCRIPTION="xine is a free multimedia player. It plays back CDs, DVDs, and
 VCDs. It also decodes multimedia files like AVI, MOV, WMV, and MP3 from local
