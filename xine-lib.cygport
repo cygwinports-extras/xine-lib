@@ -1,6 +1,6 @@
 NAME="xine-lib"
 VERSION=1.2.6
-RELEASE=3
+RELEASE=4
 CATEGORY="Libs"
 SUMMARY="Xine multimedia engine"
 DESCRIPTION="xine is a free multimedia player. It plays back CDs, DVDs, and
@@ -11,7 +11,10 @@ uncommon formats, too."
 HOMEPAGE="http://www.xine-project.org/"
 SRC_URI="mirror://sourceforge/xine/${NAME}-${VERSION}.tar.xz"
 PATCH_URI="
-	1.2.2-cygwin.patch
+	1.2.2-cygwin-bswap.patch
+	1.2.2-cygwin-configure.patch
+	1.2.2-cygwin-dlopen.patch
+	1.2.6-cygwin-cdda.patch
 	1.1.14-libiconv.patch
 "
 
@@ -24,7 +27,7 @@ libxine_devel_SUMMARY="${SUMMARY} (development)"
 libxine_devel_CONTENTS="usr/bin/xine-config usr/bin/xine-list-* usr/include/ usr/lib/lib*
                         usr/lib/pkgconfig/ usr/share/aclocal/ usr/share/man/man1/"
 
-DIFF_EXCLUDES="configure.h configure.h.in xine.h xine-config build_rpms.sh"
+DIFF_EXCLUDES="configure.h configure.h.in xine-config build_rpms.sh"
 
 NO_AUTOPOINT=1
 

@@ -1,0 +1,20 @@
+--- origsrc/xine-lib-1.2.2/configure.ac	2012-06-09 12:30:18.000000000 -0500
++++ src/xine-lib-1.2.2/configure.ac	2013-01-16 20:42:29.887571400 -0600
+@@ -1046,7 +1046,7 @@ XINE_REL_PLUGINDIR="$XINE_REL_PLUGINROOT
+ XINE_REL_FONTDIR="`makeexpand "$XINE_FONTDIR" | sed -e "s,^${prefix}/,,"`"
+ XINE_REL_LOCALEDIR="`makeexpand "$XINE_LOCALEDIR" | sed -e "s,^${prefix}/,,"`"
+ XINE_PKGCONFIG_DIR="`makeexpand "$pkgconfigdir"`"
+-if test "x$WIN32_SYS" = "xmingw32" -o "x$WIN32_SYS" = "xcygwin"; then
++if test "x$WIN32_SYS" = "xmingw32"; then
+     dnl polish paths (MinGW runtime accepts both \ and / anyway)
+     XINE_REL_PLUGINROOT="`echo "$XINE_REL_PLUGINROOT" | sed -e 's/\\//\\\\\\\\/g'`"
+     XINE_REL_PLUGINDIR="$XINE_REL_PLUGINROOT.$XINE_LT_AGE"
+@@ -1075,7 +1075,7 @@ AC_SUBST(XINE_LOCALEDIR)
+ AC_SUBST(XINE_PKGCONFIG_DIR)
+ 
+ LIBTOOL_DESTDIR_DEFAULT=
+-if test "x$SYS" != "xmingw32" -a "x$SYS" != "xcygwin"; then
++if test "x$SYS" != "xmingw32"; then
+   LIBTOOL_DESTDIR_DEFAULT=/
+ fi
+ AC_SUBST([LIBTOOL_DESTDIR_DEFAULT])

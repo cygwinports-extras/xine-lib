@@ -1,0 +1,22 @@
+--- origsrc/xine-lib-1.2.2/src/input/input_dvd.c	2013-01-17 00:23:06.950936400 -0600
++++ src/xine-lib-1.2.2/src/input/input_dvd.c	2013-01-16 20:40:29.000000000 -0600
+@@ -1780,6 +1780,8 @@ static void *init_class (xine_t *xine, v
+ 
+ #ifdef HOST_OS_DARWIN
+   if ((dvdcss = dlopen("libdvdcss.2.dylib", RTLD_LAZY)) != NULL)
++#elif defined(__CYGWIN__)
++  if ((dvdcss = dlopen("cygdvdcss-2.dll", RTLD_LAZY)) != NULL)
+ #else
+   if ((dvdcss = dlopen("libdvdcss.so.2", RTLD_LAZY)) != NULL)
+ #endif
+--- origsrc/xine-lib-1.2.2/src/input/libdvdnav/dvd_input.c	2013-01-17 00:23:06.957437300 -0600
++++ src/xine-lib-1.2.2/src/input/libdvdnav/dvd_input.c	2013-01-16 20:40:29.000000000 -0600
+@@ -367,6 +367,8 @@ int dvdinput_setup(void)
+ 
+ #ifdef HOST_OS_DARWIN
+   dvdcss_library = dlopen("libdvdcss.2.dylib", RTLD_LAZY);
++#elif defined(__CYGWIN__)
++  dvdcss_library = dlopen("cygdvdcss-2.dll", RTLD_LAZY);
+ #elif defined(WIN32)
+   dvdcss_library = dlopen("libdvdcss.dll", RTLD_LAZY);
+ #else
