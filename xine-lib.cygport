@@ -1,6 +1,6 @@
 NAME="xine-lib"
-VERSION=1.2.6
-RELEASE=4
+VERSION=1.2.8
+RELEASE=1
 CATEGORY="Libs"
 SUMMARY="Xine multimedia engine"
 DESCRIPTION="xine is a free multimedia player. It plays back CDs, DVDs, and
@@ -80,7 +80,7 @@ CYGCONF_ARGS="
   --enable-modplug
   --enable-musepack
   --enable-mng
-  --enable-real-codecs --with-real-codecs-path=/usr/lib/win32
+  --disable-real-codecs
   --with-speex
   --with-theora
   --enable-vcd
@@ -114,5 +114,3 @@ src_install() {
 }
 
 export LTCFLAGS="${CFLAGS}"
-
-KEEP_LA_FILES="none"
