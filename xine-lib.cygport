@@ -1,6 +1,6 @@
 NAME="xine-lib"
-VERSION=1.2.8
-RELEASE=2
+VERSION=1.2.9
+RELEASE=1
 CATEGORY="Libs"
 SUMMARY="Xine multimedia engine"
 DESCRIPTION="xine is a free multimedia player. It plays back CDs, DVDs, and
@@ -14,7 +14,8 @@ PATCH_URI="
 	1.2.2-cygwin-bswap.patch
 	1.2.2-cygwin-configure.patch
 	1.2.2-cygwin-dlopen.patch
-	1.2.6-cygwin-cdda.patch
+	1.2.9-cygwin-cdda.patch
+	1.2.9-cygwin-utils.patch
 	1.1.14-libiconv.patch
 "
 

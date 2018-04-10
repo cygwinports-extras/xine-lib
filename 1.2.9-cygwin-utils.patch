@@ -1,0 +1,14 @@
+--- origsrc/xine-lib-1.2.9/src/xine-utils/utils.c	2018-01-11 06:49:47.000000000 -0600
++++ src/xine-lib-1.2.9/src/xine-utils/utils.c	2018-04-10 15:49:24.776439200 -0500
+@@ -61,9 +61,10 @@
+ #include <langinfo.h>
+ #endif
+ 
+-#if defined(WIN32)
++#if defined(WIN32) || defined(__CYGWIN__)
+ #include <windows.h>
+ #include <shlobj.h>
++#include <io.h>
+ #endif
+ 
+ #ifndef O_CLOEXEC
